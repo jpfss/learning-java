@@ -2,11 +2,11 @@ package readingbook.apressjavacollections.chapter3;
 
 import java.util.Vector;
 public class RemoveVector {
-	
+
   static boolean removeAll(Vector v, Object e) {
     Vector v1 = new Vector();
     v1.add(e);
-    // 移出所有在参数 Vector 中出现的元素
+    // 绉诲嚭鎵�鏈夊湪鍙傛暟 Vector 涓嚭鐜扮殑鍏冪礌
     return v.removeAll(v1);
   }
   public static void main (String args[]) {

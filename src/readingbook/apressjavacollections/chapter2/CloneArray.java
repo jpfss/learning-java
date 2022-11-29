@@ -12,9 +12,9 @@ public class CloneArray {
     System.out.println(Arrays.equals(array1, array1s));
     array1[0] = 100;
     System.out.println("New size: " + array1s.length);
-    System.out.println("New element 0 : " + array1s[0]);//因为这是基本类型的数组clone
-    // 如果是对象数组的话，克隆的仅仅是引用，指向的是相同的基本对象
-    
+    System.out.println("New element 0 : " + array1s[0]);//鍥犱负杩欐槸鍩烘湰绫诲瀷鐨勬暟缁刢lone
+    // 濡傛灉鏄璞℃暟缁勭殑璇濓紝鍏嬮殕鐨勪粎浠呮槸寮曠敤锛屾寚鍚戠殑鏄浉鍚岀殑鍩烘湰瀵硅薄
+
     System.out.println("Original size: " + array2.length);
     System.out.println("New size: " + cloneArray(array2).length);
   }

@@ -6,8 +6,8 @@ import java.util.Set;
 public class SetDemo {
 	public static void main(String[] args) {
 		Set s = new HashSet();
-		// ÒòÎªÕâ¼¸¸öµÄhashcode¶¼Ò»Ñù£¬ËùÒÔÖ»ÓĞµÚÒ»¸ö²åÈë³É¹¦
-		//Ê£ÏÂµÄ·µ»ØFALSE£¨µ×²ã·¢ÉúÁËÌæ»»£¿£¿£©
+		// å› ä¸ºè¿™å‡ ä¸ªçš„hashcodeéƒ½ä¸€æ ·ï¼Œæ‰€ä»¥åªæœ‰ç¬¬ä¸€ä¸ªæ’å…¥æˆåŠŸ
+		//å‰©ä¸‹çš„è¿”å›FALSEï¼ˆåº•å±‚å‘ç”Ÿäº†æ›¿æ¢ï¼Ÿï¼Ÿï¼‰
 		System.out.println(s.add("Hello"));
 		System.out.println(s.add("Hello"));
 		System.out.println(s.add(new String("Hello")));

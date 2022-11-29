@@ -6,11 +6,11 @@ import java.util.Arrays;
 public class IteratorRemove2 {
 	public static void main(String[] args) {
 		String ss[] = {"1st", "2nd", "3rd", "4th", "5th",
-                "1st", "2nd", "3rd", "4th", "5th"};
+				"1st", "2nd", "3rd", "4th", "5th"};
 		ArrayList<String> al = new ArrayList<String>(Arrays.asList(ss));
-		
-		for(String s: al){// ÕâÀïÈÔÈ»Ê¹ÓÃµÄµü´úÆ÷£¬
-			// java.util.ConcurrentModificationException Òì³£
+
+		for(String s: al){// è¿™é‡Œä»ç„¶ä½¿ç”¨çš„è¿­ä»£å™¨ï¼Œ
+			// java.util.ConcurrentModificationException å¼‚å¸¸
 			if(s.equals("3rd"))
 				al.remove(s);
 		}

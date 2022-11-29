@@ -10,12 +10,12 @@ public class MyClassLoader extends ClassLoader{
 	private String path="D:\\";
 	private final String fileExtendName=".class";
 	public MyClassLoader(String name){
-		super();//ÈÃÏµÍ³Àà¼ÓÔØÆ÷³ÉÎª¸ÃÀà¼ÓÔØÆ÷µÄ¸¸¼ÓÔØÆ÷
-		this.name=name;	
+		super();//è®©ç³»ç»Ÿç±»åŠ è½½å™¨æˆä¸ºè¯¥ç±»åŠ è½½å™¨çš„çˆ¶åŠ è½½å™¨
+		this.name=name;
 	}
 	public MyClassLoader(ClassLoader parent,String name){
 		super(parent);//
-		this.name=name;	
+		this.name=name;
 	}
 	public String getPath() {
 		return path;
@@ -23,11 +23,11 @@ public class MyClassLoader extends ClassLoader{
 	public void setPath(String path) {
 		this.path = path;
 	}
-	
+
 	public String toString() {
 		return this.name;
 	}
-	
+
 	private byte[] loadClassData(String name){
 		InputStream is=null;
 		byte[] data=null;
@@ -53,12 +53,12 @@ public class MyClassLoader extends ClassLoader{
 		}
 		return data;
 	}
-	
+
 	protected Class<?> findClass(String name) throws ClassNotFoundException {
 		byte[] data=loadClassData(name);
 		return this.defineClass(name, data, 0, data.length);
 	}
-	
+
 	public static void main(String[] args) throws Exception {
 		MyClassLoader loader1=new MyClassLoader("loader1");
 		loader1.setPath("f:\\test\\loader1\\");
@@ -66,7 +66,7 @@ public class MyClassLoader extends ClassLoader{
 		loader2.setPath("f:\\test\\loader2\\");
 		MyClassLoader loader3=new MyClassLoader(null,"loader3");
 		loader3.setPath("f:\\test\\loader3\\");
-		
+
 		test(loader2);
 		System.out.println("----------------");
 		test(loader3);
@@ -75,5 +75,5 @@ public class MyClassLoader extends ClassLoader{
 		Class clazz=c.loadClass("Sample");
 		Object o=clazz.newInstance();
 	}
-	
+
 }

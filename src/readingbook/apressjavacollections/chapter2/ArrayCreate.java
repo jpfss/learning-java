@@ -4,38 +4,38 @@ import java.lang.reflect.Array;
 import java.util.Random;
 
 public class ArrayCreate {
-  public static void main (String args[]) {
-	  	// ´´½¨Ò»¸öÊý×é
-	  	Object array = Array.newInstance(int.class, 3);
-    	printType(array);
-    	fillArray(array);
-    	displayArray(array);
-  }
-  // ´òÓ¡ß@‚€Œ¦ÏóµÄÊý×éÀàÐÍºÍ´óÐ¡
-  private static void printType (Object object) {
-    Class<?> type = object.getClass();
-    if (type.isArray()) {
-    	Class<?> elementType = type.getComponentType();
-      	System.out.println("Array of: " + elementType);
-      	System.out.println("Array size: " + Array.getLength(object));
+    public static void main (String args[]) {
+        // åˆ›å»ºä¸€ä¸ªæ•°ç»„
+        Object array = Array.newInstance(int.class, 3);
+        printType(array);
+        fillArray(array);
+        displayArray(array);
     }
-  }
-  // Ìî³äÊý×é
-  private static void fillArray(Object array) {
-    int length = Array.getLength(array);
-    Random generator = new Random(System.currentTimeMillis());
-    for (int i=0; i<length; i++) {
-    	int random = generator.nextInt();
-      	//Sets the value of the indexed component of the specified
-      	//array object to the specified int value.
-      	Array.setInt(array, i, random);
+    // æ‰“å°é€™å€‹å°è±¡çš„æ•°ç»„ç±»åž‹å’Œå¤§å°
+    private static void printType (Object object) {
+        Class<?> type = object.getClass();
+        if (type.isArray()) {
+            Class<?> elementType = type.getComponentType();
+            System.out.println("Array of: " + elementType);
+            System.out.println("Array size: " + Array.getLength(object));
+        }
     }
-  }
-  private static void displayArray(Object array) {
-    int length = Array.getLength(array);
-    for (int i=0; i<length; i++) {
-    	int value = Array.getInt(array, i);
-    	System.out.println("Position: " + i + ", value: " + value);
+    // å¡«å……æ•°ç»„
+    private static void fillArray(Object array) {
+        int length = Array.getLength(array);
+        Random generator = new Random(System.currentTimeMillis());
+        for (int i=0; i<length; i++) {
+            int random = generator.nextInt();
+            //Sets the value of the indexed component of the specified
+            //array object to the specified int value.
+            Array.setInt(array, i, random);
+        }
     }
-  }
+    private static void displayArray(Object array) {
+        int length = Array.getLength(array);
+        for (int i=0; i<length; i++) {
+            int value = Array.getInt(array, i);
+            System.out.println("Position: " + i + ", value: " + value);
+        }
+    }
 }

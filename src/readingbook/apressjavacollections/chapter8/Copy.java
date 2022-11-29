@@ -4,19 +4,19 @@ import java.io.*;
 import java.util.*;
 public class Copy {
   public static void main (String args[]) throws Exception {
-    String elements[] = {"Irish Setter", "Poodle", 
-      "English Setter", "Gordon Setter", "Pug"};
+    String elements[] = {"Irish Setter", "Poodle",
+            "English Setter", "Gordon Setter", "Pug"};
     Set set = new HashSet(Arrays.asList(elements));
     Set set2 = ((Set)((HashSet)set).clone());
-   
+
     System.out.println(set2);
-    
+
     System.out.println(set2.remove("Pug"));
-    //ËäÈ»ÊÇÇ³¿½±´£¬µ«ÊÇÒÆ³ıµÄ½ö½öÊÇ×Ô¼ºµÄÄÇ·İ
+    //è™½ç„¶æ˜¯æµ…æ‹·è´ï¼Œä½†æ˜¯ç§»é™¤çš„ä»…ä»…æ˜¯è‡ªå·±çš„é‚£ä»½
     System.out.println(set);
     System.out.println(set2);
-    
-  
-    // µ«ÊÇÈçºÎÊÔÍ¼ĞŞ¸Äµ×²ãµÄÊı¾İ½á¹¹ÄØ£¿
+
+
+    // ä½†æ˜¯å¦‚ä½•è¯•å›¾ä¿®æ”¹åº•å±‚çš„æ•°æ®ç»“æ„å‘¢ï¼Ÿ
   }
 }

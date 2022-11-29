@@ -14,7 +14,7 @@ public class DoubleArray2 {
     if (type.isArray()) {
       int length = Array.getLength(original);
       Class<?> elementType = type.getComponentType();
-      // ¸ù¾İÊı×é×é¼şµÄÀàĞÍ£¬À´À©Èİ
+      // æ ¹æ®æ•°ç»„ç»„ä»¶çš„ç±»å‹ï¼Œæ¥æ‰©å®¹
       returnValue = Array.newInstance(elementType, length*2);
       System.arraycopy(original, 0, returnValue, 0, length);
     }

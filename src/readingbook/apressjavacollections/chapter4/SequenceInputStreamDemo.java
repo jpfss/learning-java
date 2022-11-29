@@ -13,7 +13,7 @@ public class SequenceInputStreamDemo {
 		v.add(new FileInputStream("C:\\data\\1.txt"));
 		v.add(new FileInputStream("C:\\data\\2.txt"));
 		v.add(new FileInputStream("C:\\data\\3.txt"));
-		
+
 		Enumeration e = v.elements();
 		SequenceInputStream sis = new SequenceInputStream(e);
 		InputStreamReader isr = new InputStreamReader(sis);
@@ -23,14 +23,14 @@ public class SequenceInputStreamDemo {
 			System.out.println(line);
 			// processData(line);
 		}
-		
+
 		br.close();
 		sis.close();
-		
-		
+
+
 	}
 }
 
 /**
- * ×¢ÒâÔÚÃ¿¸öÎÄ¼şµÄÃ¿Ò»ĞĞ¶¼ÒªÓĞ»»ĞĞ·û£¬·ñÔòÊä³öºÜ»ìÂÒ¡£
+ * æ³¨æ„åœ¨æ¯ä¸ªæ–‡ä»¶çš„æ¯ä¸€è¡Œéƒ½è¦æœ‰æ¢è¡Œç¬¦ï¼Œå¦åˆ™è¾“å‡ºå¾ˆæ··ä¹±ã€‚
  */

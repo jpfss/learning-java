@@ -6,14 +6,14 @@ public class StringTokenizerDemo {
 	public static void main(String[] args) {
 		StringTokenizer st = new StringTokenizer("  vonzhou  , inhao .");
 		while(st.hasMoreElements()){
-			// 而nextElement方法返回的是Object类型
+			// 鑰宯extElement鏂规硶杩斿洖鐨勬槸Object绫诲瀷
 			System.out.println(st.nextElement());
 		}
-		
+
 		System.out.println("=============================");
 		st = new StringTokenizer("  vonzhou  , inhao .");
 		while(st.hasMoreTokens()){
-			// 和上面的区别是nextToken方法返回的是 String类型
+			// 鍜屼笂闈㈢殑鍖哄埆鏄痭extToken鏂规硶杩斿洖鐨勬槸 String绫诲瀷
 			System.out.println(st.nextToken());
 		}
 	}

@@ -8,7 +8,7 @@ public class ArrayEnumeration implements Enumeration {
   private int cursor;
   private final Object array;
   public ArrayEnumeration(Object obj) {
-	  // ÀûÓÃ·´Éä£¬ÕâÀïĞèÒªµÄ²ÎÊıÊÇÊı×éÀàĞÍ
+    // åˆ©ç”¨åå°„ï¼Œè¿™é‡Œéœ€è¦çš„å‚æ•°æ˜¯æ•°ç»„ç±»å‹
     Class type = obj.getClass();
     if (!type.isArray()) {
       throw new IllegalArgumentException("Invalid type: " + type);
@@ -19,26 +19,26 @@ public class ArrayEnumeration implements Enumeration {
   public boolean hasMoreElements() {
     return (cursor < size);
   }
-  
-  // ×¢ÒâÕâÀï·µ»ØµÄÊÇObject
+
+  // æ³¨æ„è¿™é‡Œè¿”å›çš„æ˜¯Object
   public Object nextElement() {
     return Array.get(array, cursor++);
   }
   public static void main(String args[]) {
-	  // ×¢ÒâenumÒ²ÊÇÖ®Ç°JavaµÄ¹Ø¼ü×Ö£¬ËùÒÔ²»ÒªÓÃ×÷±äÁ¿Ãû
-	  String[] test = {"vonzhou", "sdf", "fxgsfd", "dsfgs",};
-	  Enumeration enumer = new ArrayEnumeration(test);
+    // æ³¨æ„enumä¹Ÿæ˜¯ä¹‹å‰Javaçš„å…³é”®å­—ï¼Œæ‰€ä»¥ä¸è¦ç”¨ä½œå˜é‡å
+    String[] test = {"vonzhou", "sdf", "fxgsfd", "dsfgs",};
+    Enumeration enumer = new ArrayEnumeration(test);
     while (enumer.hasMoreElements()) {
       System.out.println(enumer.nextElement());
     }
-    
+
     Object obj = new int[] {2, 3, 5, 8, 13, 21};
     enumer = new ArrayEnumeration(obj);
     while (enumer.hasMoreElements()) {
       System.out.println(enumer.nextElement());
     }
     try {
-    	enumer = new ArrayEnumeration(ArrayEnumeration.class);
+      enumer = new ArrayEnumeration(ArrayEnumeration.class);
     } catch (IllegalArgumentException e) {
       System.out.println("Oops: " + e.getMessage());
     }

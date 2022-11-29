@@ -18,7 +18,7 @@ class PredicateIterator implements Iterator {
     boolean hasNext;
     while (hasNext = iter.hasNext()) {
       next = iter.next();
-      // 找到一个满足条件的对象
+      // 鎵惧埌涓�涓弧瓒虫潯浠剁殑瀵硅薄
       if (pred.predicate(next)) {
         break;
       }
@@ -26,7 +26,7 @@ class PredicateIterator implements Iterator {
     return hasNext;
   }
   public Object next() {
-	  // ?????
+    // ?????
     if (!doneNext) {
       boolean has = hasNext();
       if (!has) {
@@ -37,7 +37,6 @@ class PredicateIterator implements Iterator {
     return next;
   }
 }
-
 
 
 

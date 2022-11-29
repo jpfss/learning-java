@@ -11,26 +11,26 @@ import java.util.Set;
 
 public class SetSerialize  {
 	public static void main(String[] args) throws Exception{
-		String elements[] = {"Irish Setter", "Poodle", 
-			      "English Setter", "Gordon Setter", "Pug"};
+		String elements[] = {"Irish Setter", "Poodle",
+				"English Setter", "Gordon Setter", "Pug"};
 		Set set = new HashSet(Arrays.asList(elements));
-		
-		// ĞòÁĞ»¯
+
+		// åºåˆ—åŒ–
 		FileOutputStream fos = new FileOutputStream("C:\\data\\set.ser");
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
 		oos.writeObject(set);
 		oos.close();
-		
-		// ·´ĞòÁĞ»¯
+
+		// ååºåˆ—åŒ–
 		FileInputStream fis = new FileInputStream("C:\\data\\set.ser");
 		ObjectInputStream ois = new ObjectInputStream(fis);
 		Set set2 = (Set)ois.readObject();
 		ois.close();
-		
+
 		Iterator iter = set2.iterator();
-	    while (iter.hasNext()) {
-	      System.out.println(iter.next());
-	    }
+		while (iter.hasNext()) {
+			System.out.println(iter.next());
+		}
 	}
 
 }

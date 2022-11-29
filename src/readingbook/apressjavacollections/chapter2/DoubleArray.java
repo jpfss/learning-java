@@ -8,17 +8,17 @@ public class DoubleArray {
     System.out.println("Original size: " + array1.length);
     array1s = doubleArray(array1);
     System.out.println("New size: " + array1s.length);
-    
+
     System.out.println("Original size: " + array2.length);
     System.out.println("New size: " + doubleArray(array2).length);
   }
-  
+
   /**
-   * ÔÚÕâ¸öº¯ÊıÄÚ²¿·ÖÅäÁËÏàÓ¦µÄÄÚ´æ
+   * åœ¨è¿™ä¸ªå‡½æ•°å†…éƒ¨åˆ†é…äº†ç›¸åº”çš„å†…å­˜
    */
   static int[] doubleArray(int original[]) {
     int length = original.length;
-    int newArray[] = new int[length*2];//ÁªÏµCÓïÑÔÖĞµÄ±ß³¤Êı×é
+    int newArray[] = new int[length*2];//è”ç³»Cè¯­è¨€ä¸­çš„è¾¹é•¿æ•°ç»„
     System.arraycopy(original, 0, newArray, 0, length);
     return newArray;
   }
