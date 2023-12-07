@@ -9,13 +9,13 @@ public class TwoThreadSleep extends Thread {
 		// get a reference to the thread running this
 		Thread t = Thread.currentThread();
 		String name = t.getName();
-		// ÕâÀïÊÇÔËĞĞÊ±»ñµÃµÄ·ÃÎÊ£¬²»´æÔÚ¸üĞÂÄ³Ğ©±äÁ¿£¬ËùÒÔ¶àÏß³Ì²»»á³öÏÖÎÊÌâ£»
+		// è¿™é‡Œæ˜¯è¿è¡Œæ—¶è·å¾—çš„è®¿é—®ï¼Œä¸å­˜åœ¨æ›´æ–°æŸäº›å˜é‡ï¼Œæ‰€ä»¥å¤šçº¿ç¨‹ä¸ä¼šå‡ºç°é—®é¢˜ï¼›
 
 		System.out.println("just entered loop() - " + name);
 
 		for ( int i = 0; i < 10; i++ ) {
 			try {
-				Thread.sleep(200);   // Ê±¼äµ¥Î»ÊÇºÁÃë
+				Thread.sleep(200);   // æ—¶é—´å•ä½æ˜¯æ¯«ç§’
 			} catch ( InterruptedException x ) {
 				// ignore
 			}

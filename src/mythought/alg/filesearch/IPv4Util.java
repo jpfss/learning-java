@@ -3,8 +3,8 @@ package mythought.alg.filesearch;
 public class IPv4Util {
 
 	/*
-	 * °ÑIP´®×ª»¯ÎªÕûÊı
-	 * A.B.C.D¿ÉÒÔÀí½âÎª256½øÖÆµÄÊı
+	 * æŠŠIPä¸²è½¬åŒ–ä¸ºæ•´æ•°
+	 * A.B.C.Då¯ä»¥ç†è§£ä¸º256è¿›åˆ¶çš„æ•°
 	 */
 	public static int  ip2int(String ipAddress) {
 		String[] ipAddressInArray = ipAddress.split("\\.");

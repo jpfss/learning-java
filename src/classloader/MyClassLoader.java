@@ -10,7 +10,7 @@ public class MyClassLoader extends ClassLoader{
 	private String path="D:\\";
 	private final String fileExtendName=".class";
 	public MyClassLoader(String name){
-		super();//ÈÃÏµÍ³Àà¼ÓÔØÆ÷³ÉÎª¸ÃÀà¼ÓÔØÆ÷µÄ¸¸¼ÓÔØÆ÷
+		super();//è®©ç³»ç»Ÿç±»åŠ è½½å™¨æˆä¸ºè¯¥ç±»åŠ è½½å™¨çš„çˆ¶åŠ è½½å™¨
 		this.name=name;	
 	}
 	public MyClassLoader(ClassLoader parent,String name){

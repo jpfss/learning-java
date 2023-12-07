@@ -17,7 +17,7 @@ public class SecondCounterRunnableMain extends JPanel {
 
 		stopB.setEnabled(false);  // begin with this disabled
 
-		// ÓÉ JavaVM¡¯s event handling threadÀ´¸ºÔğÖ´ĞĞ
+		// ç”± JavaVMâ€™s event handling threadæ¥è´Ÿè´£æ‰§è¡Œ
 		startB.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					// disable to stop more "start" requests

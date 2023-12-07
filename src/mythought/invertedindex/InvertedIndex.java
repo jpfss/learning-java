@@ -11,7 +11,7 @@ public class InvertedIndex {
 	// key word <----> doc file
 	private Map<String, Set<String>> indexs = new HashMap<String, Set<String>>();
 
-	// ÕâÀï¼ÙÉè¶¼ÊÇĞ¡ÎÄ¼ş
+	// è¿™é‡Œå‡è®¾éƒ½æ˜¯å°æ–‡ä»¶
 	public void addFile(String fileName, String content) {
 		String[] words = content.split(" ");
 
@@ -37,7 +37,7 @@ public class InvertedIndex {
 
 	        while (line != null) {
 	            sb.append(line);
-	            sb.append(" ");// Ã¿ĞĞÖ±½Ó´®½Ó
+	            sb.append(" ");// æ¯è¡Œç›´æ¥ä¸²æ¥
 	            line = br.readLine();
 	        }
 	        this.addFile(fileName, sb.toString());

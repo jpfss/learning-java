@@ -2,10 +2,10 @@ package classloader;
 
 public class TestClassLoader {
 	public static void main(String[] args) throws ClassNotFoundException {
-		//¸ùÀà¼ÓÔØÆ÷¼ÓÔØ
+		//æ ¹ç±»åŠ è½½å™¨åŠ è½½
 		Class clazz=Class.forName("java.lang.String");
 		System.out.println(clazz.getClassLoader());
-		//ÏµÍ³¼ÓÔØÆ÷£¨Ó¦ÓÃ¼ÓÔØÆ÷£©¼ÓÔØ
+		//ç³»ç»ŸåŠ è½½å™¨ï¼ˆåº”ç”¨åŠ è½½å™¨ï¼‰åŠ è½½
 		Class clazz2=Class.forName("classloader.Apple");
 		System.out.println(clazz2.getClassLoader());
 	}

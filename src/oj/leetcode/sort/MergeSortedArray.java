@@ -11,7 +11,7 @@ import java.util.Arrays;
  * in A and B are m and n respectively.
  */
 public class MergeSortedArray {
-	//从后往前遍历，合并
+	//浠庡悗寰�鍓嶉亶鍘嗭紝鍚堝苟
     public static void merge(int A[], int m, int B[], int n) {
         int ia = m -1, ib = n - 1, index = m + n - 1;
         while(ia >= 0 && ib >= 0){
@@ -23,7 +23,7 @@ public class MergeSortedArray {
         while(ib >= 0){
         	A[index --] = B[ib --];
         }
-        // 如果是A长的话，已经在位
+        // 濡傛灉鏄疉闀跨殑璇濓紝宸茬粡鍦ㄤ綅
     }
     
     public static void main(String[] args) {

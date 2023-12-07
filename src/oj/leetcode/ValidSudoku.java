@@ -14,10 +14,10 @@ import java.util.Set;
  *  A valid Sudoku board (partially filled) is not necessarily solvable.
  *   Only the filled cells need to be validated.
  *   
- * 1.×î×ÔÈ»µÄÏë·¨ÊÇÒÀ´Î¼ì²éÕâ¸öÈı¸ö¹æÔò£¬ĞĞ£¬ÁĞ£¬9¸ö¹¬£¬ÔªËØÊÇ·ñÖØ¸´Ò²ÊÇ¶Ôhash±íµÄ¿¼²ì,O(n^2)
- * 2.·½·¨1ÓĞºÜ¶àÖØ¸´µÄÂß¼­£¬¶øÇÒÀûÓÃµÄ HashSet ²¢Ã»ÓĞÌ«´ó±ØÒª
- *   ÔÚË÷ÒıÉÏĞèÒª¼¼ÇÉ£¬Í¬Ê±ÀûÓÃÈı¸ö±êÖ¾ÏòÁ¿À´´¦ÀíÈı¸ö¹æÔò£¬flags[0-9]·Ö±ğÓÃÓÚ±£´æ¶ÔÓ¦Êı×ÖÊÇ·ñ³öÏÖ¹ı£»
- * 3. ÍêÈ«ÓÃ¿Õ¼ä»»Ê±¼ä£¬ÓÃÈı¸ö¾ØÕó·Ö±ğÓÃÓÚ±£´æjÊÇ·ñ³öÏÖÔÚµÚi¸ö(ĞĞ/ÁĞ/Íø¸ñ)
+ * 1.æœ€è‡ªç„¶çš„æƒ³æ³•æ˜¯ä¾æ¬¡æ£€æŸ¥è¿™ä¸ªä¸‰ä¸ªè§„åˆ™ï¼Œè¡Œï¼Œåˆ—ï¼Œ9ä¸ªå®«ï¼Œå…ƒç´ æ˜¯å¦é‡å¤ä¹Ÿæ˜¯å¯¹hashè¡¨çš„è€ƒå¯Ÿ,O(n^2)
+ * 2.æ–¹æ³•1æœ‰å¾ˆå¤šé‡å¤çš„é€»è¾‘ï¼Œè€Œä¸”åˆ©ç”¨çš„ HashSet å¹¶æ²¡æœ‰å¤ªå¤§å¿…è¦
+ *   åœ¨ç´¢å¼•ä¸Šéœ€è¦æŠ€å·§ï¼ŒåŒæ—¶åˆ©ç”¨ä¸‰ä¸ªæ ‡å¿—å‘é‡æ¥å¤„ç†ä¸‰ä¸ªè§„åˆ™ï¼Œflags[0-9]åˆ†åˆ«ç”¨äºä¿å­˜å¯¹åº”æ•°å­—æ˜¯å¦å‡ºç°è¿‡ï¼›
+ * 3. å®Œå…¨ç”¨ç©ºé—´æ¢æ—¶é—´ï¼Œç”¨ä¸‰ä¸ªçŸ©é˜µåˆ†åˆ«ç”¨äºä¿å­˜jæ˜¯å¦å‡ºç°åœ¨ç¬¬iä¸ª(è¡Œ/åˆ—/ç½‘æ ¼)
  */
 public class ValidSudoku {
 	// 1.
@@ -32,7 +32,7 @@ public class ValidSudoku {
 		// row case
 		for(int i = 0; i < m ; i++){
 			set.clear();
-			// µü´úÕâÒ»ĞĞ
+			// è¿­ä»£è¿™ä¸€è¡Œ
 			for(char c : board[i]){
 				boolean isValid = checkValid(set,c);
 				if(!isValid) return false;
@@ -42,7 +42,7 @@ public class ValidSudoku {
 		// column case
 		for(int j = 0; j < n; j++){
 			set.clear();
-			//µü´úÕâÒ»ÁĞ
+			//è¿­ä»£è¿™ä¸€åˆ—
 			for(int i = 0; i < m; i++){
 				boolean isValid = checkValid(set, board[i][j]);
 				if(!isValid) return false;
@@ -60,7 +60,7 @@ public class ValidSudoku {
 	 return true;       
 	}
 
-	// ¼ì²éÃ¿¸ö3X3Íø¸ñÊÇ·ñ·ûºÏ¹æÔò
+	// æ£€æŸ¥æ¯ä¸ª3X3ç½‘æ ¼æ˜¯å¦ç¬¦åˆè§„åˆ™
 	private boolean checkGridValid(char board[][], int m, int n, Set<Character> set) {
 		set.clear();
 		for(int i = m; i < m + 3; i++)
@@ -71,7 +71,7 @@ public class ValidSudoku {
 		return true;
 	}
 
-	// ÔÚ¼¯ºÏÖĞ²é¿´ÊÇ·ñÖØ¸´
+	// åœ¨é›†åˆä¸­æŸ¥çœ‹æ˜¯å¦é‡å¤
 	private boolean checkValid(Set<Character> set, char c) {
 		if(c == '.') return true;
 		if(set.contains(c)) return false;
@@ -79,25 +79,25 @@ public class ValidSudoku {
 		return true;
 	}
 	
-	//ÕâÀï±ß½ç¼ì²é²»ÊÇÖØµã
+	//è¿™é‡Œè¾¹ç•Œæ£€æŸ¥ä¸æ˜¯é‡ç‚¹
 	public boolean isValidSudoku2(char[][] board) {
-		boolean rows[] = new boolean[9]; //ÓÃÓÚ±êÊ¶  Ã¿Ò»ÌË1-9ÊÇ·ñÒÑ³öÏÖ
+		boolean rows[] = new boolean[9]; //ç”¨äºæ ‡è¯†  æ¯ä¸€è¶Ÿ1-9æ˜¯å¦å·²å‡ºç°
 		boolean cols[] = new boolean[9];
 		boolean grid[] = new boolean[9];
 		
 		for(int i = 0; i < 9; i++){
-			// ÔÚ´¦ÀíÏÂÒ» (ĞĞ/ÁĞ/Íø¸ñ)Ö®Ç°ÏÈ³õÊ¼»¯Îª²»´æÔÚ
+			// åœ¨å¤„ç†ä¸‹ä¸€ (è¡Œ/åˆ—/ç½‘æ ¼)ä¹‹å‰å…ˆåˆå§‹åŒ–ä¸ºä¸å­˜åœ¨
 			Arrays.fill(rows, false);
 			Arrays.fill(cols, false);
 			Arrays.fill(grid, false);
 			for(int j = 0; j < 9; j++){
 				boolean rowValid = checkValid2(rows, board[i][j]);
 				if(!rowValid) return false;
-				// ÕâÑù×öĞ§ÂÊºÜ²î
+				// è¿™æ ·åšæ•ˆç‡å¾ˆå·®
 				boolean colValid = checkValid2(cols, board[j][i]);
 				if(!colValid) return false;
 				
-				//µÚÒ»¸öÍø¸ñ¶ÔÓ¦µÄ·Ö±ğÊÇ0-0,0-1..0-9£¬ÒÀ´ÎÀàÍÆ
+				//ç¬¬ä¸€ä¸ªç½‘æ ¼å¯¹åº”çš„åˆ†åˆ«æ˜¯0-0,0-1..0-9ï¼Œä¾æ¬¡ç±»æ¨
 				boolean gridValid = checkValid2(grid, board[3*(i/3) + j/3][3*(i%3) + j%3]);
 				if(!gridValid) return false;
 				
@@ -118,8 +118,8 @@ public class ValidSudoku {
 	
 	//3.
 	public boolean isValidSudoku(char[][] board) {
-		//³ä·ÖÀûÓÃÕâĞ©Êı×ÖµÄÌØµã
-		// xxx[i][j] ±íÊ¾ jÊÇ·ñ³öÏÖÔÚµÚi¸öĞĞ/ÁĞ/×Ó¹¬¸ñ ÖĞ
+		//å……åˆ†åˆ©ç”¨è¿™äº›æ•°å­—çš„ç‰¹ç‚¹
+		// xxx[i][j] è¡¨ç¤º jæ˜¯å¦å‡ºç°åœ¨ç¬¬iä¸ªè¡Œ/åˆ—/å­å®«æ ¼ ä¸­
 		boolean rowContainer[][] = new boolean[9][9];
 		boolean colContainer[][] = new boolean[9][9];
 		boolean gridContainer[][] = new boolean[9][9];

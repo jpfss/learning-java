@@ -3,12 +3,12 @@ package algorithm.topic.backtrack;
 
 /*
  * Classic exhaustive permutation pattern
- * µÃµ½ËùÓĞµÄÈ«ÅÅÁĞ
+ * å¾—åˆ°æ‰€æœ‰çš„å…¨æ’åˆ—
  */
 public class ExhaustivePermutation {
 	
 	/*
-	 * ²»¶Ïµİ¹é£¬Í¨¹ı²ÎÊı´«µİµ±Ç°ÒÑ¾­¹¹³ÉµÄ×Ö·û´®£¬ÒÔ¼°¿É¹©µÄÑ¡Ôñ
+	 * ä¸æ–­é€’å½’ï¼Œé€šè¿‡å‚æ•°ä¼ é€’å½“å‰å·²ç»æ„æˆçš„å­—ç¬¦ä¸²ï¼Œä»¥åŠå¯ä¾›çš„é€‰æ‹©
 	 */
 	public static void RecPermute(String soFar, String rest)
 	{

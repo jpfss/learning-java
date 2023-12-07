@@ -5,7 +5,7 @@ public class DaemonThreadMain extends Object {
 		System.out.println("entering main()");
 
 		Thread t = new Thread(new DaemonThread());
-		t.setDaemon(true);// ÉèÖÃÎªÊØ»¤½ø³Ì
+		t.setDaemon(true);// è®¾ç½®ä¸ºå®ˆæŠ¤è¿›ç¨‹
 		t.start();
 
 		try { Thread.sleep(3000); } catch ( InterruptedException x ) { }

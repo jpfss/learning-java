@@ -16,11 +16,11 @@ Given binary tree {1,#,2,3},
 return [3,2,1].
  * Note: Recursive solution is trivial, could you do it iteratively?
  * 
- * 考察：前中后遍历的非递归实现方法
+ * 鑰冨療锛氬墠涓悗閬嶅巻鐨勯潪閫掑綊瀹炵幇鏂规硶
  */
 public class BinaryTreePostorderTraversal {
 	
-	// 这是最难的
+	// 杩欐槸鏈�闅剧殑
 	public List<Integer> postorderTraversal2(BinaryTreeNode root) {
 		List<Integer> res = new ArrayList<Integer>();
 		if(root == null) return res;
@@ -89,8 +89,8 @@ public class BinaryTreePostorderTraversal {
 		List<Integer> ll = new ArrayList<Integer>();
 		List<Integer> rl = new ArrayList<Integer>();
 		//List<Integer> rootl = new ArrayList<Integer>();
-		if(root == null)	return ll;//注意这里不是返回null，反则不符合要求
-										//在输入为{} 的时候，输出 []
+		if(root == null)	return ll;//娉ㄦ剰杩欓噷涓嶆槸杩斿洖null锛屽弽鍒欎笉绗﹀悎瑕佹眰
+										//鍦ㄨ緭鍏ヤ负{} 鐨勬椂鍊欙紝杈撳嚭 []
 		//rootl.add(root.val);
 		
 		if(root.left != null) 

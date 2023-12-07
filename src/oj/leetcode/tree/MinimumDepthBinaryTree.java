@@ -5,9 +5,9 @@ package oj.leetcode.tree;
  * Given a binary tree, find its minimum depth.
  * The minimum depth is the number of nodes along the shortest path 
  * from the root node down to the nearest leaf node.
- * ×¢ÒâÕâÀïµÄ¶¨Òå£ºÊÇµ½Ò¶½ÚµãµÄ×î¶Ì¾àÀë£¬ËùÒÔ{1,3}Ó¦¸ÃÊä³ö2 ¶ø²»ÊÇ1
+ * æ³¨æ„è¿™é‡Œçš„å®šä¹‰ï¼šæ˜¯åˆ°å¶èŠ‚ç‚¹çš„æœ€çŸ­è·ç¦»ï¼Œæ‰€ä»¥{1,3}åº”è¯¥è¾“å‡º2 è€Œä¸æ˜¯1
  * 
- * Ïà¹ØÎÊÌâ   -- MaxDepthBinaryTree
+ * ç›¸å…³é—®é¢˜   -- MaxDepthBinaryTree
  */
 public class MinimumDepthBinaryTree {
 	public int minDepth(BinaryTreeNode root) {
@@ -17,7 +17,7 @@ public class MinimumDepthBinaryTree {
 	}
 	public int getDepth(BinaryTreeNode root) {
 		if (root == null)
-			return Integer.MAX_VALUE; // ×¢ÒâÕâÀï
+			return Integer.MAX_VALUE; // æ³¨æ„è¿™é‡Œ
 		if(root.left == null && root.right == null)
 			return 1;
 		

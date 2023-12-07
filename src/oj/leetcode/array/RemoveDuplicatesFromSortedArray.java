@@ -12,7 +12,7 @@ import java.util.Arrays;
  * Given input array A = [1,1,2],
  *Your function should return length = 2, and A is now [1,2].
  *
- *Ïà¹ØÌâÄ¿£º Remove Element
+ *ç›¸å…³é¢˜ç›®ï¼š Remove Element
  */
 public class RemoveDuplicatesFromSortedArray {
 	public static int removeDuplicates(int[] A) {
@@ -27,7 +27,7 @@ public class RemoveDuplicatesFromSortedArray {
 		return index + 1;
 	}
 	
-	// ²âÊÔ£¬ËäÈ»ÊÇÖµ´«µİ£¬µ«ÊÇ¶ÔÓ¦µÄµ×²ãÔªËØÖ»ÓĞÒ»·İ£¬ËùÒÔ»á¸Ä±ä
+	// æµ‹è¯•ï¼Œè™½ç„¶æ˜¯å€¼ä¼ é€’ï¼Œä½†æ˜¯å¯¹åº”çš„åº•å±‚å…ƒç´ åªæœ‰ä¸€ä»½ï¼Œæ‰€ä»¥ä¼šæ”¹å˜
 	public static void func(int[] a){
 		a[0] = 100;
 	}

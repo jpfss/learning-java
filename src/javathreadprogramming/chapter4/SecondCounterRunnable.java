@@ -43,7 +43,7 @@ public class SecondCounterRunnable extends JComponent implements Runnable {
 		}
 	}
 
-	// ÔÚÊÂ¼şº¯ÊıÖĞµ÷ÓÃ£¬ËùÒÔ¾¡Á¿×öĞ©¼òµ¥µÄ¶¯×÷£»
+	// åœ¨äº‹ä»¶å‡½æ•°ä¸­è°ƒç”¨ï¼Œæ‰€ä»¥å°½é‡åšäº›ç®€å•çš„åŠ¨ä½œï¼›
 	public void stopClock() {
 		keepRunning = false;
 	}

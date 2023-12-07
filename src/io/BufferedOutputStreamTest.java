@@ -9,7 +9,7 @@ public class BufferedOutputStreamTest {
 		OutputStream os=new FileOutputStream("f:/hello.txt");
 		BufferedOutputStream bos=new BufferedOutputStream(os);
 		bos.write("vonzhou".getBytes());
-		bos.close();//ÔÚÊÍ·Å×ÊÔ´Ç°£¬µ×²ã»áµ÷ÓÃflush·½·¨£¬½«»º³åÇøµÄÄÚÈİĞ´µ½ÎÄ¼şÖĞ
+		bos.close();//åœ¨é‡Šæ”¾èµ„æºå‰ï¼Œåº•å±‚ä¼šè°ƒç”¨flushæ–¹æ³•ï¼Œå°†ç¼“å†²åŒºçš„å†…å®¹å†™åˆ°æ–‡ä»¶ä¸­
 		os.close();
 	}
 

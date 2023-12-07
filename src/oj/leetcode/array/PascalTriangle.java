@@ -19,12 +19,12 @@ import java.util.List;
 
 public class PascalTriangle {
 	
-	// 1.×Ô¼ºÏëµ½µÄ·½·¨
+	// 1.è‡ªå·±æƒ³åˆ°çš„æ–¹æ³•
 	public List<List<Integer>> generate(int numRows) {  
 		List<List<Integer>> res = new ArrayList<List<Integer>>();
 		List<Integer> level = null;
 		if(numRows <= 0)
-			return res; // ×¢ÒâÕâÀï ·µ»ØµÄÊÇ¿Õ¼¯ºÏ£¬¶ø²»ÊÇnull
+			return res; // æ³¨æ„è¿™é‡Œ è¿”å›çš„æ˜¯ç©ºé›†åˆï¼Œè€Œä¸æ˜¯null
 		
 		//first level
 		level = new ArrayList<Integer>();
@@ -32,7 +32,7 @@ public class PascalTriangle {
 		res.add(level);
 		
 		for(int i = 2; i <= numRows; i++){
-			List<Integer> pre = res.get(i - 2);//×¢ÒâÕâÀï
+			List<Integer> pre = res.get(i - 2);//æ³¨æ„è¿™é‡Œ
 			
 			//first 1
 			level = new ArrayList<Integer>();

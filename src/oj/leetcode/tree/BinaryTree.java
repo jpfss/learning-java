@@ -15,19 +15,19 @@ public class BinaryTree {
 
 	public BinaryTreeNode createBiTreeFromList() {
 		int parentIndex = 0;
-		// ½«ÕâĞ©Êı×Ö×ª»»ÎªÒ»¸ö¸ö½Úµã
+		// å°†è¿™äº›æ•°å­—è½¬æ¢ä¸ºä¸€ä¸ªä¸ªèŠ‚ç‚¹
 		List<BinaryTreeNode> nodes = new ArrayList<BinaryTreeNode>();
 		for (int i = 0; i < list.size(); i++)
 			nodes.add(new BinaryTreeNode(list.get(i)));
 
 		int lastParentIndex = nodes.size() / 2 - 1;
-		// ¸ù¾İ¶ş²æÊ÷µÄÌØµã½«ÕâĞ©½ÚµãÁ´½ÓÆğÀ´
+		// æ ¹æ®äºŒå‰æ ‘çš„ç‰¹ç‚¹å°†è¿™äº›èŠ‚ç‚¹é“¾æ¥èµ·æ¥
 		for (parentIndex = 0; parentIndex < lastParentIndex; parentIndex++) {
 			nodes.get(parentIndex).left = nodes.get(2 * parentIndex + 1);
 			nodes.get(parentIndex).right = nodes.get(2 * parentIndex + 2);
 		}
 
-		// Ö»ĞèÒª¶Ô×îºóÒ»¸ö¸¸½Úµã½øĞĞÌØÊâ¿¼ÂÇ
+		// åªéœ€è¦å¯¹æœ€åä¸€ä¸ªçˆ¶èŠ‚ç‚¹è¿›è¡Œç‰¹æ®Šè€ƒè™‘
 		nodes.get(lastParentIndex).left = nodes.get(2 * lastParentIndex + 1);
 		if (nodes.size() % 2 == 1)
 			nodes.get(lastParentIndex).right = nodes

@@ -17,14 +17,14 @@ X X X X
 X X X X
 X X X X
 X O X X
-ÀûÓÃUnion findËã·¨£¬»®·ÖÎª²»Í¬µÄÁ¬Í¨×é¼ş£¬È»ºóÁ¬Í¨×é¼şÊÇO²¢ÇÒ²»°üº¬±ßÔµµÄO£¬ÄÇÃ´¾ÍËµÃ÷±»°üÎ§
-ËùÒÔÔÚUFËã·¨»ù´¡ÉÏ£¬ĞèÒªÔö¼Ó¶îÍâµÄ¼ÇÂ¼
+åˆ©ç”¨Union findç®—æ³•ï¼Œåˆ’åˆ†ä¸ºä¸åŒçš„è¿é€šç»„ä»¶ï¼Œç„¶åè¿é€šç»„ä»¶æ˜¯Oå¹¶ä¸”ä¸åŒ…å«è¾¹ç¼˜çš„Oï¼Œé‚£ä¹ˆå°±è¯´æ˜è¢«åŒ…å›´
+æ‰€ä»¥åœ¨UFç®—æ³•åŸºç¡€ä¸Šï¼Œéœ€è¦å¢åŠ é¢å¤–çš„è®°å½•
 
-ÓÃÊ± £º 2h
+ç”¨æ—¶ ï¼š 2h
  */
 public class SurroundedRegions {
 	int unionSet[];
-	boolean hasEdgeO[];  //ËùÔÚĞĞÁĞÊÇ·ñÓĞ±ß½çÉÏµÄO
+	boolean hasEdgeO[];  //æ‰€åœ¨è¡Œåˆ—æ˜¯å¦æœ‰è¾¹ç•Œä¸Šçš„O
 	
 	public void solve(char[][] board) {
 		if(board == null || board.length == 0 || board[0].length == 0)
@@ -34,7 +34,7 @@ public class SurroundedRegions {
 		int unionSize = row * col;
 		unionSet = new int[unionSize];
 		hasEdgeO = new boolean[unionSize];
-		// ³õÊ¼»¯²¢²é¼¯ºÏ±êÊ¶ÏòÁ¿
+		// åˆå§‹åŒ–å¹¶æŸ¥é›†åˆæ ‡è¯†å‘é‡
 		for(int i = 0; i < unionSize; i ++){
 			unionSet[i] = i;
 			int x = i / col, y = i % col; // locate
@@ -42,7 +42,7 @@ public class SurroundedRegions {
 					(x == 0 || x == row - 1 || y == 0 || y == col - 1);
 		}
 		
-		//±éÀúÕâ¸ö¾ØÕó£¬±È¶Ôµ±Ç°ÔªËØºÍËüµÄÉÏ·½£¬ÓÒ·½£¬¿´ÄÜ·ñºÏ²¢
+		//éå†è¿™ä¸ªçŸ©é˜µï¼Œæ¯”å¯¹å½“å‰å…ƒç´ å’Œå®ƒçš„ä¸Šæ–¹ï¼Œå³æ–¹ï¼Œçœ‹èƒ½å¦åˆå¹¶
 		for(int i = 0; i < unionSize ; i++){
 			int x = i / col, y = i % col;
 			int up = x - 1, right = y + 1;
@@ -52,20 +52,20 @@ public class SurroundedRegions {
 				union(i, i + 1);
 		}
 		
-		//È»ºó flipping
+		//ç„¶å flipping
 		for(int i = 0; i < unionSize ; i++){
 			int x = i / col, y = i % col;
-			// ÌØ±ğÒª×¢ÒâÕâÀï Òª¿´¸ù½ÚµãµÄÇé¿ö
+			// ç‰¹åˆ«è¦æ³¨æ„è¿™é‡Œ è¦çœ‹æ ¹èŠ‚ç‚¹çš„æƒ…å†µ
 			if(board[x][y] == 'O' && !hasEdgeO[find(i)])
 				board[x][y] = 'X';
 		}
 	}
 
-	// ÕâÀï²ÉÓÃ quick-union ·½·¨
+	// è¿™é‡Œé‡‡ç”¨ quick-union æ–¹æ³•
 	private void union(int x, int y) {
 		int rootX = find(x);
 		int rootY = find(y);
-		//Ô¼¶¨ºÏ²¢µ½ºóÒ»¸öÁ¬Í¨·ÖÁ¿
+		//çº¦å®šåˆå¹¶åˆ°åä¸€ä¸ªè¿é€šåˆ†é‡
 		unionSet[rootX] = rootY;
 		boolean b = hasEdgeO[rootX] || hasEdgeO[rootY];
 		hasEdgeO[rootX] = b;

@@ -7,19 +7,19 @@ import java.io.OutputStream;
 public class ByteArrayOutputStreamTest {
 	public static void main(String[] args) throws Exception {
 		ByteArrayOutputStream baos=new ByteArrayOutputStream();
-		//String str="¾öÕ½Çí»ªÖ®áÛ";//Ò»ºº×ÖÕ¼Á½¸ö×Ö½Ú
+		//String str="å†³æˆ˜ç¼åä¹‹å·…";//ä¸€æ±‰å­—å ä¸¤ä¸ªå­—èŠ‚
 		String str="vonzhou";
 		byte[] buffer=str.getBytes();
-		baos.write(buffer);//½«×Ö·û´®¶ÔÓ¦µÄ×Ö½ÚÁ÷Ğ´µ½ ×Ö½ÚÊä³öÁ÷ÖĞ
+		baos.write(buffer);//å°†å­—ç¬¦ä¸²å¯¹åº”çš„å­—èŠ‚æµå†™åˆ° å­—èŠ‚è¾“å‡ºæµä¸­
 		
-		byte[] result=baos.toByteArray();//½«×Ö½Ú´ÓÁ÷ÖĞÄÃ³öÀ´
+		byte[] result=baos.toByteArray();//å°†å­—èŠ‚ä»æµä¸­æ‹¿å‡ºæ¥
 		
 		System.out.println(result.length);
 		for(int i=0;i<result.length;i++){
 			System.out.println((char)result[i]);
 		}
 		
-		//½«×Ö½ÚÁ÷ÖĞµÄÄÚÈİĞ´Èëµ½ÎÄ¼şÊä³öÁ÷ÖĞ
+		//å°†å­—èŠ‚æµä¸­çš„å†…å®¹å†™å…¥åˆ°æ–‡ä»¶è¾“å‡ºæµä¸­
 		OutputStream os=new FileOutputStream("hello.txt");
 		baos.writeTo(os);
 		baos.close();

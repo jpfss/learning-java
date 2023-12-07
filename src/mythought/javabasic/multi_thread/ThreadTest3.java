@@ -3,8 +3,8 @@ package mythought.javabasic.multi_thread;
 public class ThreadTest3 {
 	public static void main(String[] args) {
 		Runnable r=new Thread3();
-		//µ±ÓÃÍ¬Ò»¸öRunnable¶ÔÏó´´½¨Ïß³ÌÊ±£¬Èç¹ûÊÇ³ÉÔ±±äÁ¿£¬Ïß³Ì»áÏà»¥Ó°Ïì
-		//´òÓ¡µÄ´ÎÊı²»µÈÓÚ60,¶øÊÇ²»È·¶¨µÄ (<=60)
+		//å½“ç”¨åŒä¸€ä¸ªRunnableå¯¹è±¡åˆ›å»ºçº¿ç¨‹æ—¶ï¼Œå¦‚æœæ˜¯æˆå‘˜å˜é‡ï¼Œçº¿ç¨‹ä¼šç›¸äº’å½±å“
+		//æ‰“å°çš„æ¬¡æ•°ä¸ç­‰äº60,è€Œæ˜¯ä¸ç¡®å®šçš„ (<=60)
 		Thread t1=new Thread(r);
 		Thread t2=new Thread(r);
 		//Thread t3=new Thread(r);
@@ -24,7 +24,7 @@ class Thread3 implements Runnable{
 			System.out.println("NUMBER: "+(i++));
 			
 			try {
-				Thread.sleep(100);//µ±Ê±¼ä±ä´óÊ±Í¬Ñù³öÏÖÎÊÌâ
+				Thread.sleep(100);//å½“æ—¶é—´å˜å¤§æ—¶åŒæ ·å‡ºç°é—®é¢˜
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

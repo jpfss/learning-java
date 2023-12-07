@@ -18,11 +18,11 @@ package oj.leetcode.sort;
  *  
  *  Could you come up with an one-pass algorithm using only constant space?
  *  
- *  1.ÕâÖÖÖ±½Ó¼ÆÊıµÄ·½·¨ÓĞµã¹şÏ£µÄË¼Ïë£¬ÕâÀïµÄ¼ü¾ÍÈı¸ö£»
- *  2.ÁªÏëµ½ÁË ¿ìÅÅÔÚ´¦ÀíÖØ¸´ÔªËØÊ±µÄ²ßÂÔ £¬ Èı¶ÎÇĞ·Ö[<v, = v, >v]
+ *  1.è¿™ç§ç›´æ¥è®¡æ•°çš„æ–¹æ³•æœ‰ç‚¹å“ˆå¸Œçš„æ€æƒ³ï¼Œè¿™é‡Œçš„é”®å°±ä¸‰ä¸ªï¼›
+ *  2.è”æƒ³åˆ°äº† å¿«æ’åœ¨å¤„ç†é‡å¤å…ƒç´ æ—¶çš„ç­–ç•¥ ï¼Œ ä¸‰æ®µåˆ‡åˆ†[<v, = v, >v]
  */
 public class SortColors {
-	// 1. ¼ÆÊıÅÅĞò
+	// 1. è®¡æ•°æ’åº
 	   public void sortColors(int[] A) {
 		   if(A == null || A.length == 0)
 			   return;
@@ -44,7 +44,7 @@ public class SortColors {
 			   A[i++] = 2;
 	   }    
 	   
-	   // 2. ÀûÓÃË«Ö¸Õë £¬ ·Ö±ğ´ÓÇ°£¬ºó¹¹Ôì£¨ÏòÖĞ¼äÇ°½ø£©
+	   // 2. åˆ©ç”¨åŒæŒ‡é’ˆ ï¼Œ åˆ†åˆ«ä»å‰ï¼Œåæ„é€ ï¼ˆå‘ä¸­é—´å‰è¿›ï¼‰
 	   public void sortColors2(int[] A) {
 		   if(A == null || A.length == 0)
 			   return;
@@ -54,7 +54,7 @@ public class SortColors {
 			   if(A[i] == 0)
 				   swap(A, i++, red++);
 			   else if(A[i] == 2)
-				   swap(A, i, blue--);// ÕâÀïiÃ»ÓĞÍÆ½ø£¬ÒòÎª¶Ôµ÷¹ıÀ´µÄÑÕÉ«ĞèÒªÅĞ¶Ï
+				   swap(A, i, blue--);// è¿™é‡Œiæ²¡æœ‰æ¨è¿›ï¼Œå› ä¸ºå¯¹è°ƒè¿‡æ¥çš„é¢œè‰²éœ€è¦åˆ¤æ–­
 			   else i++;
 		   }
 	   }

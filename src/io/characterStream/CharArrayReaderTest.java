@@ -8,7 +8,7 @@ public class CharArrayReaderTest {
 		
 		String str="abcdefg";
 		char[] c=new char[str.length()];
-		//½«×Ö·û´®×Ö·ûÊý×éch
+		//å°†å­—ç¬¦ä¸²å­—ç¬¦æ•°ç»„ch
 		str.getChars(0, str.length(),c,0);
 		
 		CharArrayReader car=new CharArrayReader(c);

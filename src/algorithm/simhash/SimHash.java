@@ -6,13 +6,13 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 /*
- * Õâ¸öSimHashµÄÊµÏÖÀ´×ÔÍøÉÏ£¬×öÁËĞ©×¢ÊÍ
+ * è¿™ä¸ªSimHashçš„å®ç°æ¥è‡ªç½‘ä¸Šï¼Œåšäº†äº›æ³¨é‡Š
  */
 public class SimHash {
 	private String tokens;
 	private BigInteger intSimHash;
 	private String strSimHash;
-	private int hashbits = 64; // simhash codeµÄÎ»Êı
+	private int hashbits = 64; // simhash codeçš„ä½æ•°
 
 	public SimHash(String tokens) {
 		this.tokens = tokens;
@@ -25,12 +25,12 @@ public class SimHash {
 		this.intSimHash = this.simHash();
 	}
 
-	// »ñµÃtokensµÄ simhashÖµ ÕûÊıĞÎÊ½ ºÍ ×Ö·û´®ĞÎÊ½
+	// è·å¾—tokensçš„ simhashå€¼ æ•´æ•°å½¢å¼ å’Œ å­—ç¬¦ä¸²å½¢å¼
 	public BigInteger simHash() {
-		// ³õÊ¼»¯Ò»¸ö64Î¬µÄÌØÕ÷ÏòÁ¿
+		// åˆå§‹åŒ–ä¸€ä¸ª64ç»´çš„ç‰¹å¾å‘é‡
 		final int[] v = new int[this.hashbits];
 
-		// ÀûÓÃÄ¬ÈÏµÄ·Ö´ÊÆ÷À´¶Ô×Ö·û´®½øĞĞ·Ö´Ê
+		// åˆ©ç”¨é»˜è®¤çš„åˆ†è¯å™¨æ¥å¯¹å­—ç¬¦ä¸²è¿›è¡Œåˆ†è¯
 		final StringTokenizer stringTokens = new StringTokenizer(this.tokens);
 		//
 		System.out.println("Token Count: " + stringTokens.countTokens());
@@ -39,8 +39,8 @@ public class SimHash {
 			final String temp = stringTokens.nextToken();
 			final BigInteger t = this.hash(temp);
 
-			// ·Ö±ğ´¦ÀíÃ¿¸ö·Ö´Ê£¬¼ÆËãÆäÌØÕ÷hash£¬¶øºóÕë¶ÔÆäÄ³Ò»Î»ÊÇ·ñÎª1£¬¶ÔÏòÁ¿v½øĞĞ¼Ó¼õ1²Ù×÷
-			// ÊÇ·ñÒ²Òª±£Ö¤Ã¿¸ötokenµÄhashÖµµÄÎ»ÊıÊÇhashbits£¿
+			// åˆ†åˆ«å¤„ç†æ¯ä¸ªåˆ†è¯ï¼Œè®¡ç®—å…¶ç‰¹å¾hashï¼Œè€Œåé’ˆå¯¹å…¶æŸä¸€ä½æ˜¯å¦ä¸º1ï¼Œå¯¹å‘é‡vè¿›è¡ŒåŠ å‡1æ“ä½œ
+			// æ˜¯å¦ä¹Ÿè¦ä¿è¯æ¯ä¸ªtokençš„hashå€¼çš„ä½æ•°æ˜¯hashbitsï¼Ÿ
 			for (int i = 0; i < this.hashbits; i++) {
 				final BigInteger bitmask = new BigInteger("1").shiftLeft(i);
 				if (t.and(bitmask).signum() != 0) {
@@ -50,7 +50,7 @@ public class SimHash {
 				}
 			}
 		}
-		// ¸ù¾İsimhashµÄÔ­Àí£¬ÌØÕ÷ÏòÁ¿ÖĞ´óÓÚ0µÄ²¿·Ö£¬¶ÔÓ¦ÓÚhashÖµµÄÄÇÒ»Î»ÊÇ1
+		// æ ¹æ®simhashçš„åŸç†ï¼Œç‰¹å¾å‘é‡ä¸­å¤§äº0çš„éƒ¨åˆ†ï¼Œå¯¹åº”äºhashå€¼çš„é‚£ä¸€ä½æ˜¯1
 		BigInteger fingerprint = new BigInteger("0");
 		final StringBuffer simHashBuffer = new StringBuffer();
 		for (int i = 0; i < this.hashbits; i++) {
@@ -67,14 +67,14 @@ public class SimHash {
 		return fingerprint;
 	}
 
-	// ÕâÊÇÊ²Ã´hashËã·¨£¿£¿£¿£¿ÄÜ·ñÌæ»»³É sha-1
+	// è¿™æ˜¯ä»€ä¹ˆhashç®—æ³•ï¼Ÿï¼Ÿï¼Ÿï¼Ÿèƒ½å¦æ›¿æ¢æˆ sha-1
 	private BigInteger hash(String source) {
 		if (source == null || source.length() == 0) {
 			return new BigInteger("0");
 		} else {
 			char[] sourceArray = source.toCharArray();
 			BigInteger x = BigInteger.valueOf(((long) sourceArray[0]) << 7);
-			BigInteger m = new BigInteger("1000003"); // ´óËØÊı
+			BigInteger m = new BigInteger("1000003"); // å¤§ç´ æ•°
 			BigInteger mask = new BigInteger("2").pow(this.hashbits).subtract(
 					new BigInteger("1"));
 			for (char item : sourceArray) {
@@ -93,8 +93,8 @@ public class SimHash {
 		BigInteger x = this.intSimHash.xor(other.intSimHash);
 		int tot = 0;
 
-		// Í³¼Æ¶ş½øÖÆ±íÊ¾µÄxÖĞ1µÄ¸öÊı
-		// ÕâÊÇ¸ö¾­µäµÄËã·¨£¬n&(n-1)¿ÉÒÔÃ¿´ÎÏûÈ¥×îÓÒ±ßµÄ1£¨×îÓÒ±ß¿ÉÄÜÊÇÒ»¸öÓò£©
+		// ç»Ÿè®¡äºŒè¿›åˆ¶è¡¨ç¤ºçš„xä¸­1çš„ä¸ªæ•°
+		// è¿™æ˜¯ä¸ªç»å…¸çš„ç®—æ³•ï¼Œn&(n-1)å¯ä»¥æ¯æ¬¡æ¶ˆå»æœ€å³è¾¹çš„1ï¼ˆæœ€å³è¾¹å¯èƒ½æ˜¯ä¸€ä¸ªåŸŸï¼‰
 		while (x.signum() != 0) {
 			tot += 1;
 			x = x.and(x.subtract(new BigInteger("1")));

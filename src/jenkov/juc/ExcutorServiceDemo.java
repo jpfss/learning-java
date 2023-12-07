@@ -35,7 +35,7 @@ public class ExcutorServiceDemo {
 			e.printStackTrace();
 		}  
 		
-		//ÀûÓÃCallable£¬ËüµÄcall·½·¨¿ÉÒÔ·µ»ØÖµ,·ºĞÍÊÇ·µ»ØÖµµÄÀàĞÍ
+		//åˆ©ç”¨Callableï¼Œå®ƒçš„callæ–¹æ³•å¯ä»¥è¿”å›å€¼,æ³›å‹æ˜¯è¿”å›å€¼çš„ç±»å‹
 		future = executorService.submit(new Callable<Object>(){
 		    public Object call() throws Exception {
 		        System.out.println("Asynchronous Callable");

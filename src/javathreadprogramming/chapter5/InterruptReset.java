@@ -5,7 +5,7 @@ public class InterruptReset extends Object {
 			"Point X: Thread.interrupted()=" + Thread.interrupted());
 		Thread.currentThread().interrupt();
 		//Thread.currentThread().interrupt();
-		// 如果interrupt被置，并且返回之前的标示
+		// 濡傛灉interrupt琚疆锛屽苟涓旇繑鍥炰箣鍓嶇殑鏍囩ず
 		System.out.println(
 			"Point Y: Thread.interrupted()=" + Thread.interrupted());
 		System.out.println(

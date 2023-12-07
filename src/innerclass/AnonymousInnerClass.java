@@ -2,7 +2,7 @@ package innerclass;
 
 import java.util.Date;
 /**
- * ÄäÃûÄÚ²¿ÀàÖØÒªÌØÕ÷£º  Implicitly extends a class or implements a interface
+ * åŒ¿åå†…éƒ¨ç±»é‡è¦ç‰¹å¾ï¼š  Implicitly extends a class or implements a interface
  * @author vonzhou
  *
  */
@@ -15,10 +15,10 @@ public class AnonymousInnerClass {
 	
 	public static void main(String[] args) {
 		new AnonymousInnerClass().get(new Date(){
-		//Éú³ÉÁËÒ»¸ö¼Ì³Ğ×ÔDateÀàµÄÄäÃûÄÚ²¿ÀàµÄ¶ÔÏó
-	    //¿ÉÒÔÖØĞ´¸¸ÀàµÄ·½·¨
+		//ç”Ÿæˆäº†ä¸€ä¸ªç»§æ‰¿è‡ªDateç±»çš„åŒ¿åå†…éƒ¨ç±»çš„å¯¹è±¡
+	    //å¯ä»¥é‡å†™çˆ¶ç±»çš„æ–¹æ³•
 			public String toLocaleString(){
-				return "µ±Ç°ÏµÍ³Ê±¼äÊÇ£º"+super.toLocaleString();
+				return "å½“å‰ç³»ç»Ÿæ—¶é—´æ˜¯ï¼š"+super.toLocaleString();
 			}
 		});
 	}

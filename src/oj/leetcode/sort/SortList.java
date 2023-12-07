@@ -4,8 +4,8 @@ package oj.leetcode.sort;
 /*
  * Sort a linked list in O(n log n) time using constant space complexity.
  * 
- * Ê±¼ä¸´ÔÓ¶ÈÎª nlogn µÄÅÅĞòËã·¨¾ÍÊÇ¹é²¢ ºÍ ¿ìÅÅ£¬µ¥Á´±íÊÊºÏÇ°Õß£¬Ë«Á´±íÊÊºÏ¿ìÅÅ
- * ¹é²¢Á´±íºÜ¼òµ¥£¬¹Ø¼üÔÚÃ¿´Î¶Ô°ë·Ö¸î×ÓÁ´±í
+ * æ—¶é—´å¤æ‚åº¦ä¸º nlogn çš„æ’åºç®—æ³•å°±æ˜¯å½’å¹¶ å’Œ å¿«æ’ï¼Œå•é“¾è¡¨é€‚åˆå‰è€…ï¼ŒåŒé“¾è¡¨é€‚åˆå¿«æ’
+ * å½’å¹¶é“¾è¡¨å¾ˆç®€å•ï¼Œå…³é”®åœ¨æ¯æ¬¡å¯¹åŠåˆ†å‰²å­é“¾è¡¨
  */
 public class SortList {
 	public ListNode sortList(ListNode head) {
@@ -18,14 +18,14 @@ public class SortList {
 		}
 		fast = slow;
 		slow = slow.next;
-		fast.next = null;  // ¶Ï¿ª
+		fast.next = null;  // æ–­å¼€
 		
 		ListNode left = sortList(head);
 		ListNode right = sortList(slow);
 		return mergeTwoLists(left, right);
 	}
 
-	//ÕâÀïµÄÑ­»·¿ØÖÆ±È MergeTwoSortedLists.java ÖĞ¸ü¼Ó¼ò½à
+	//è¿™é‡Œçš„å¾ªç¯æ§åˆ¶æ¯” MergeTwoSortedLists.java ä¸­æ›´åŠ ç®€æ´
 	public ListNode mergeTwoLists(ListNode p, ListNode q) {
 		ListNode dummy = new ListNode(-1);
 		dummy.next = null;

@@ -26,7 +26,7 @@ public class AlternateSuspendResume extends Object implements Runnable {
 		int val = 1;
 
 		while ( true ) {
-			// ¸Ğ¾õÕâÀï¾ÍÏñ¼ÓËø½âËø£¬
+			// æ„Ÿè§‰è¿™é‡Œå°±åƒåŠ é”è§£é”ï¼Œ
 			// blocks only if suspended is true
 			waitWhileSuspended(); 
 
@@ -62,7 +62,7 @@ public class AlternateSuspendResume extends Object implements Runnable {
 		suspended = false;
 	}
 
-	// Ã¦µÈ//////////
+	// å¿™ç­‰//////////
 	private void waitWhileSuspended() 
 				throws InterruptedException {
 

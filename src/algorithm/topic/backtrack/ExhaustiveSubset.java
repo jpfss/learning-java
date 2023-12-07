@@ -7,7 +7,7 @@ public class ExhaustiveSubset {
 	{
 		if (rest.length()<=0) {
 			if(soFar == "")
-				soFar = "%";   // ¿Õ¼¯ºÏ
+				soFar = "%";   // ç©ºé›†åˆ
 	        System.out.println(soFar);
 	    } else {
 	            RecSubsets(soFar + rest.charAt(0), rest.substring(1));

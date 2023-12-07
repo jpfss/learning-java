@@ -6,29 +6,29 @@ package oj.leetcode.array;
  * all numbers along its path.
  * Note: You can only move either down or right at any point in time.
  * 
- * ¶¯Ì¬¹æ»®
+ * åŠ¨æ€è§„åˆ’
  */
 public class MinimumPathSum {
 	
-	// ¼ÆËã³öµ½´ïÃ¿¸öµãµÄ×îÓÅÂ·¾¶,µ±Ç°Î»ÖÃµÄpath valueÈ¡¾öÓÚ Æä×ó±ßºÍÉÏÃæµÄÔªËØÖµ
-	// Ê±¼ä¿Õ¼ä¸´ÔÓ¶È¶¼ÊÇ  n^2
+	// è®¡ç®—å‡ºåˆ°è¾¾æ¯ä¸ªç‚¹çš„æœ€ä¼˜è·¯å¾„,å½“å‰ä½ç½®çš„path valueå–å†³äº å…¶å·¦è¾¹å’Œä¸Šé¢çš„å…ƒç´ å€¼
+	// æ—¶é—´ç©ºé—´å¤æ‚åº¦éƒ½æ˜¯  n^2
 	public int minPathSum(int[][] grid) {
 		if(grid == null || grid.length == 0)
 			return -1;
 		int m = grid.length, n = grid[0].length;
 		
-		// ±£´æÂ·¾¶ĞÅÏ¢
+		// ä¿å­˜è·¯å¾„ä¿¡æ¯
 		int[][] path = new int[m][n];
 		path[0][0] = grid[0][0];
 		
-		// ÉÏ±ß ºÍ  ×ó±ß ÒªÌØÊâ´¦Àí 
+		// ä¸Šè¾¹ å’Œ  å·¦è¾¹ è¦ç‰¹æ®Šå¤„ç† 
 		for(int i = 1; i < m; i ++)
 			path[i][0] = path[i-1][0] + grid[i][0];
 		for(int i = 1; i < n; i++)
 			path[0][i] = path[0][i-1] + grid[0][i];
 		
 		
-		// ´¦ÀíÆäËûµÄÇé¿ö
+		// å¤„ç†å…¶ä»–çš„æƒ…å†µ
 		for(int i = 1; i < m; i++)
 			for(int j = 1; j < n; j++){
 				if(path[i-1][j] < path[i][j-1])

@@ -1,7 +1,7 @@
 package classloader;
 
 class FinalTest{
-	public static final int x=6/2;//±àÒëÊ±³£Á¿£¬²»»áµ¼ÖÂÀàµÄ³õÊ¼»¯
+	public static final int x=6/2;//ç¼–è¯‘æ—¶å¸¸é‡ï¼Œä¸ä¼šå¯¼è‡´ç±»çš„åˆå§‹åŒ–
 	static {
 		System.out.println("FinalTest static block!");
 	}

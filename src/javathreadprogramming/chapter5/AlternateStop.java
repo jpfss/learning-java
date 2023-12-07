@@ -17,7 +17,7 @@ public class AlternateStop extends Object implements Runnable {
 			try {
 				Thread.sleep(300);
 			} catch ( InterruptedException x ) {
-				// 自己再调用终止方法；
+				// 鑷繁鍐嶈皟鐢ㄧ粓姝㈡柟娉曪紱
 				Thread.currentThread().interrupt(); // re-assert interrupt
 			}
 		}

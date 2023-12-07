@@ -1,7 +1,7 @@
 package javathreadprogramming.chapter5;
 
 /**
- * ���ʵ��˵���ڲ�������״̬��ʱ��������жϻ�ָ����ᷢ����һ�µ����⡣
+ * 这个实例说明在不完整的状态的时候如果被中断或恢复，会发生不一致的问题。
  * @author vonzhou
  *
  */

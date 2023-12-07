@@ -4,7 +4,7 @@ import java.io.File;
 
 public class FileTest3 {
 	public static void main(String[] args) {
-		File file=new File("F:\\AJavaœ¬‘ÿ");
+		File file=new File("F:\\AJava‰∏ãËΩΩ");
 //		String[] fileNames=file.list();
 //		for(String s:fileNames){
 //			System.out.println(s);

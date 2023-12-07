@@ -3,16 +3,16 @@ package innerclass;
 
 class StaticInner{
 	private static int a=4;
-	public static class Inner{//¾²Ì¬ÄÚ²¿ÀàÏàµ±ÓÚ¾²Ì¬³ÉÔ±±äÁ¿
+	public static class Inner{//é™æ€å†…éƒ¨ç±»ç›¸å½“äºé™æ€æˆå‘˜å˜é‡
 		public void function(){
-			System.out.println(a);//Ö»ÄÜ·ÃÎÊenclosing classµÄ¾²Ì¬³ÉÔ±
+			System.out.println(a);//åªèƒ½è®¿é—®enclosing classçš„é™æ€æˆå‘˜
 		}
 	}
 }
 
 public class StaticInnerClass {
 	public static void main(String[] args) {
-		//Éú³É¾²Ì¬ÄÚ²¿ÀàµÄ¶ÔÏó
+		//ç”Ÿæˆé™æ€å†…éƒ¨ç±»çš„å¯¹è±¡
 		StaticInner.Inner inner=new StaticInner.Inner();
 		inner.function();
 	}

@@ -21,7 +21,7 @@ public class DataOutputStreamTest {
 		dos.writeInt(b);
 		dos.writeFloat(c);
 		dos.close();
-		//向文件中写入的数据包含着数据类型的信息，不是重文本的，所以打开的二进制数据
+		//鍚戞枃浠朵腑鍐欏叆鐨勬暟鎹寘鍚潃鏁版嵁绫诲瀷鐨勪俊鎭紝涓嶆槸閲嶆枃鏈殑锛屾墍浠ユ墦寮�鐨勪簩杩涘埗鏁版嵁
 		//
 		
 		DataInputStream dis=new DataInputStream(new BufferedInputStream(new FileInputStream("data.txt")));

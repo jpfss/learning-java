@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Í¨¹ı´ÓÎÄ¼şÖĞ¶ÁÈ¡digestÀ´¼ÆËãÃ¿¸öÎÄ¼şµÄsimhash ÅĞ¶ÏÏàËÆ
+ * é€šè¿‡ä»æ–‡ä»¶ä¸­è¯»å–digestæ¥è®¡ç®—æ¯ä¸ªæ–‡ä»¶çš„simhash åˆ¤æ–­ç›¸ä¼¼
  * 
  * @author vonzhou
  * 
@@ -78,8 +78,8 @@ public class TestSimHash {
 			}
 		}
 
-		// ÉÏÃæÊÇ¶ÁÈ¡Ã¿¸öÎÄ¼ş£¬°ÑÀïÃæµÄString´æ´¢µ½hashsetÖĞ£¬
-		// ½ÓÏÂÀ´¹¹ÔìSimHash£¬½øĞĞ¶Ô±È²âÊÔ
+		// ä¸Šé¢æ˜¯è¯»å–æ¯ä¸ªæ–‡ä»¶ï¼ŒæŠŠé‡Œé¢çš„Stringå­˜å‚¨åˆ°hashsetä¸­ï¼Œ
+		// æ¥ä¸‹æ¥æ„é€ SimHashï¼Œè¿›è¡Œå¯¹æ¯”æµ‹è¯•
 		System.out.println(set1.size());
 
 		SimHash2 sm1 = new SimHash2(set1, 512);

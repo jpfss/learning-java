@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class TestHashMap {
 
-	// 泛型方法
+	// 娉涘瀷鏂规硶
 	public static <K, V> Map<K, V> newInstance() {
 		return new HashMap<K, V>();
 	}

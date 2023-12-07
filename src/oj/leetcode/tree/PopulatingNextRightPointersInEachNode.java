@@ -37,12 +37,12 @@ After calling your function, the tree should look like:
       2 -> 3 -> NULL
      / \  / \
     4->5->6->7 -> NULL
- * ¹Ø¼üµã£º ÍêÈ«¶ş²æÊ÷   ³£Êı¿Õ¼ä¸´ÔÓ¶È
+ * å…³é”®ç‚¹ï¼š å®Œå…¨äºŒå‰æ ‘   å¸¸æ•°ç©ºé—´å¤æ‚åº¦
  */
 public class PopulatingNextRightPointersInEachNode {
 	/*
-	 * ×îÖ±½ÓµÄÏëµ½ÓÃ²ãĞò±éÀú È»ºóÃ¿Ò»²ãµÄ½ÚµãÓÃnextÖ¸Õë´®Áª
-	 * µ«ÊÇ¿Õ¼ä¸´ÔÓ¶ÈÊÇ  O(¶ÓÁĞ) + O(½Úµã×ÜÊı)
+	 * æœ€ç›´æ¥çš„æƒ³åˆ°ç”¨å±‚åºéå† ç„¶åæ¯ä¸€å±‚çš„èŠ‚ç‚¹ç”¨nextæŒ‡é’ˆä¸²è”
+	 * ä½†æ˜¯ç©ºé—´å¤æ‚åº¦æ˜¯  O(é˜Ÿåˆ—) + O(èŠ‚ç‚¹æ€»æ•°)
 	 */
 	public void connect1(TreeLinkNode root) {
 		if(root == null)
@@ -63,7 +63,7 @@ public class PopulatingNextRightPointersInEachNode {
 				if(cur.right != null)
 					qu.offer(cur.right);
 			}else{
-				// °Ñ×îºóÒ»¸önull ³ö¶ÓÖ®ºó Òª·ÀÖ¹ ÎŞÏŞÑ­»·
+				// æŠŠæœ€åä¸€ä¸ªnull å‡ºé˜Ÿä¹‹å è¦é˜²æ­¢ æ— é™å¾ªç¯
 				if(!qu.isEmpty())
 					qu.offer(null);
 			}
@@ -89,9 +89,9 @@ public class PopulatingNextRightPointersInEachNode {
 	} 
 	
 	/*
-	 * ÉÏÃæÏàµ±ÓÚ¶Ô½Úµã½øĞĞÁËÁ½ÌËµÄÉ¨Ãè £¬¿Õ¼ä¸´ÔÓ¶ÈºÜ´ó
-	 * ÏÂÃæ½øĞĞÖØ¹¹£¬ÔÚ²ãĞò±éÀúµÄ¹ı³ÌÖĞ ¸üĞÂnextÖ¸Õë
-	 * ´ËÊ±¿Õ¼ä¸´ÔÓ¶ÈÊÇ  O(¶ÓÁĞ)
+	 * ä¸Šé¢ç›¸å½“äºå¯¹èŠ‚ç‚¹è¿›è¡Œäº†ä¸¤è¶Ÿçš„æ‰«æ ï¼Œç©ºé—´å¤æ‚åº¦å¾ˆå¤§
+	 * ä¸‹é¢è¿›è¡Œé‡æ„ï¼Œåœ¨å±‚åºéå†çš„è¿‡ç¨‹ä¸­ æ›´æ–°nextæŒ‡é’ˆ
+	 * æ­¤æ—¶ç©ºé—´å¤æ‚åº¦æ˜¯  O(é˜Ÿåˆ—)
 	 */
 	public void connect2(TreeLinkNode root) {
 		if(root == null)
@@ -108,7 +108,7 @@ public class PopulatingNextRightPointersInEachNode {
 			//every time traverse a node, update next pointer here
 			if(pre != null)
 				pre.next = cur;
-			//²»¹ÜÔõÑù¶¼Òª¼ÇµÃÒÆ¶¯ pre Ö¸Õë 
+			//ä¸ç®¡æ€æ ·éƒ½è¦è®°å¾—ç§»åŠ¨ pre æŒ‡é’ˆ 
 			pre = cur;
 			
 			// offer its children to the queue
@@ -118,7 +118,7 @@ public class PopulatingNextRightPointersInEachNode {
 				if(cur.right != null)
 					qu.offer(cur.right);
 			}else{
-				// °Ñ×îºóÒ»¸önull ³ö¶ÓÖ®ºó Òª·ÀÖ¹ ÎŞÏŞÑ­»·
+				// æŠŠæœ€åä¸€ä¸ªnull å‡ºé˜Ÿä¹‹å è¦é˜²æ­¢ æ— é™å¾ªç¯
 				if(!qu.isEmpty())
 					qu.offer(null);
 			}
@@ -126,8 +126,8 @@ public class PopulatingNextRightPointersInEachNode {
 	} 
 	
 	/*
-	 * ÄÑµãÔÚÓÚÈçºÎ×öµ½ constant extra space.
-	 * ¹Ø¼üµã£º×ÜÊÇÀûÓÃÉÏÒ»²ãÒÑ¾­±»next´®ÆğÀ´µÄĞÔÖÊ£¬À´¹¹½¨µ±Ç°ÕâÒ»²ã£¬»­¸öÍ¼£¬ÈİÒ×Àí½â¡£
+	 * éš¾ç‚¹åœ¨äºå¦‚ä½•åšåˆ° constant extra space.
+	 * å…³é”®ç‚¹ï¼šæ€»æ˜¯åˆ©ç”¨ä¸Šä¸€å±‚å·²ç»è¢«nextä¸²èµ·æ¥çš„æ€§è´¨ï¼Œæ¥æ„å»ºå½“å‰è¿™ä¸€å±‚ï¼Œç”»ä¸ªå›¾ï¼Œå®¹æ˜“ç†è§£ã€‚
 	 */
 	public void connect(TreeLinkNode root) {
 		// bcs it is perfect tree , so just test its left pointer

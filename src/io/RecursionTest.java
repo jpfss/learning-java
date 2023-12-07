@@ -1,15 +1,15 @@
 package io;
 
 public class RecursionTest {
-	//Ê¹ÓÃµİ¹é¼ÆËã½×³Ë
+	//ä½¿ç”¨é€’å½’è®¡ç®—é˜¶ä¹˜
 	public int f(int num){
-		if(1==num){//	µİ¹éµÄ³ö¿Ú 
+		if(1==num){//	é€’å½’çš„å‡ºå£ 
 			return 1;
 			}
 		return num*f(num-1);
 	}
 	
-	//Ê¹ÓÃµİ¹é¼ÆËãì³²¨ÄÇÆõÊıÁĞ
+	//ä½¿ç”¨é€’å½’è®¡ç®—æ–æ³¢é‚£å¥‘æ•°åˆ—
 	public int fab(int num){
 		if(num==1||2==num){
 			return 1;

@@ -6,7 +6,7 @@ public class ArrayListTest {
 	public static void main(String[] args) {
 //		ArrayList list=new ArrayList();
 //		list.add(new Integer(8));
-//		//Ô­ÉúÊı¾İÀàĞÍ²»ÊÇ¶ÔÏó£¬ËùÒÔÒªÓÃ°ü×°ÀàĞÍ
+//		//åŸç”Ÿæ•°æ®ç±»å‹ä¸æ˜¯å¯¹è±¡ï¼Œæ‰€ä»¥è¦ç”¨åŒ…è£…ç±»å‹
 //		list.add(new Integer(10));
 //		System.out.println(list);
 //		Object[] array=list.toArray();

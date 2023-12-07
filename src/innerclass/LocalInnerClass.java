@@ -3,8 +3,8 @@ package innerclass;
 class A{
 	public void function1(){
 		final int a=90;//
-		class B{//¾Ö²¿ÄÚ²¿Àà ¶¨ÒåÔÚ·½·¨µ±ÖĞ£¬Ö»ÄÜ·ÃÎÊfinal µÄ³ÉÔ±±äÁ¿
-			//¾Ö²¿ÄÚ²¿ÀàÃ»ÓĞpublicµÈµÄĞŞÊÎ£¬ÈçÍ¬¾Ö²¿±äÁ¿Ò»Ñù
+		class B{//å±€éƒ¨å†…éƒ¨ç±» å®šä¹‰åœ¨æ–¹æ³•å½“ä¸­ï¼Œåªèƒ½è®¿é—®final çš„æˆå‘˜å˜é‡
+			//å±€éƒ¨å†…éƒ¨ç±»æ²¡æœ‰publicç­‰çš„ä¿®é¥°ï¼Œå¦‚åŒå±€éƒ¨å˜é‡ä¸€æ ·
 			public void function2(){System.out.println(a);} 
 		}
 		new B().function2();

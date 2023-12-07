@@ -40,7 +40,7 @@ class Entry {
 public class BinarySearchFile {
 	private File file;
 	private String path;
-	private ArrayList<Entry> entries;// TODO  ×Ô¼ºÓÃÊı×éÊµÏÖ
+	private ArrayList<Entry> entries;// TODO  è‡ªå·±ç”¨æ•°ç»„å®ç°
 
 	public BinarySearchFile(String path) {
 		this.path = path;
@@ -76,7 +76,7 @@ public class BinarySearchFile {
 			Entry entry = new Entry(startIP, endIP,  offset);
 			entries[k++] = entry;
 			
-			// NB.ÕâÀï´æÔÚÎÊÌâ£¬ÒòÎªoffsetÊÇ×Ö½Ú¼¶±ğµÄ£¬¶ø×Ö·û´®ºÍÌØ¶¨±àÂëÓĞ¹Ø
+			// NB.è¿™é‡Œå­˜åœ¨é—®é¢˜ï¼Œå› ä¸ºoffsetæ˜¯å­—èŠ‚çº§åˆ«çš„ï¼Œè€Œå­—ç¬¦ä¸²å’Œç‰¹å®šç¼–ç æœ‰å…³
 			offset += len;
 		}
 	}

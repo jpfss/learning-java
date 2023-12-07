@@ -24,23 +24,23 @@ return its bottom-up level order traversal as:
 ]
  */
 /*
- * ºÍÉÏÒ»¸öÌâ²»Í¬µÄÊÇ£¬ÕâÀïÒª×Ôµ×ÏòÉÏµÄ·½Ê½£¬Ö»ĞèÒª¹¹ÔìÁ´±íµÄ·½Ê½¸Ä±ä¼´¿É
+ * å’Œä¸Šä¸€ä¸ªé¢˜ä¸åŒçš„æ˜¯ï¼Œè¿™é‡Œè¦è‡ªåº•å‘ä¸Šçš„æ–¹å¼ï¼Œåªéœ€è¦æ„é€ é“¾è¡¨çš„æ–¹å¼æ”¹å˜å³å¯
  */
 public class BinaryTreeLevelOrderTraversalII {
 	  public List<List<Integer>> levelOrderBottom(BinaryTreeNode root) {
 		  
 		  Queue<BinaryTreeNode> queue = new LinkedList<BinaryTreeNode>();
-		  // ²ÉÓÃÁ´±í£¬Í·²å·¨ÊµÏÖµ¹Ğò
+		  // é‡‡ç”¨é“¾è¡¨ï¼Œå¤´æ’æ³•å®ç°å€’åº
 		  List<List<Integer>> res = new LinkedList<List<Integer>>();  
 		  List<Integer> level ; // deal with every level
 		  
 		  if(root == null)
-			  return res;  // ÒªÇó¿ÕµÄÊ±ºò·µ»Ø "[]"¶ø²»ÊÇnull
+			  return res;  // è¦æ±‚ç©ºçš„æ—¶å€™è¿”å› "[]"è€Œä¸æ˜¯null
 		  
 		  queue.offer(root);
 		  while(!queue.isEmpty()){
 			  level = new ArrayList<Integer>();
-			  // Ã¿Ò»²ãµÄÊ±ºòÇóÒ»´Î´óĞ¡£¬¶ø²»ÊÇÔÚ´¦ÀíµÄ¹ı³ÌÖĞ£¬´íÎófor(int i = 0; i < queue.size(); i++)
+			  // æ¯ä¸€å±‚çš„æ—¶å€™æ±‚ä¸€æ¬¡å¤§å°ï¼Œè€Œä¸æ˜¯åœ¨å¤„ç†çš„è¿‡ç¨‹ä¸­ï¼Œé”™è¯¯for(int i = 0; i < queue.size(); i++)
 			  int size = queue.size();
 			  for(int i = 0; i < size; i++){
 				  BinaryTreeNode cur = queue.remove();
@@ -54,7 +54,7 @@ public class BinaryTreeLevelOrderTraversalII {
 					  queue.add(cur.right);
 				  level.add(cur.val);
 			  }
-			  res.add(0, level); // ×¢ÒâÕâÀï
+			  res.add(0, level); // æ³¨æ„è¿™é‡Œ
 		  }
 		  
 		  return res;

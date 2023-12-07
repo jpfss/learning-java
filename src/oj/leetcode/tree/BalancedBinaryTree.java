@@ -9,7 +9,7 @@ package oj.leetcode.tree;
  */
 public class BalancedBinaryTree {  
 	
-	// ºÜÈİÒ×Ïëµ½ÕâÖÖ·½Ê½£¬µ«ÊÇĞèÒªÖØ¸´±éÀú
+	// å¾ˆå®¹æ˜“æƒ³åˆ°è¿™ç§æ–¹å¼ï¼Œä½†æ˜¯éœ€è¦é‡å¤éå†
 	public  boolean isBalanced(BinaryTreeNode root) {
 		if(root == null)
 			return true;
@@ -28,7 +28,7 @@ public class BalancedBinaryTree {
 		return Math.max(ll, rl) + 1;
 	}
 	
-	// 2.¼ôÖ¦·££¬Ã»¿´¶®
+	// 2.å‰ªæç½šï¼Œæ²¡çœ‹æ‡‚
 	
 	
 }

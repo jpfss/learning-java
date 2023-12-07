@@ -34,8 +34,8 @@ public class ContainerWithMostWater {
 	/*
 	 * Two pointer - O(N)
 	 * how to prove its rightness ???
-	 * Èç¹û h[left] < h[right] ´ËÊ±µÄÃæ»ýÊÇ h[left] * (right - left), ËùÒÔ×óÒÆÓÒÖ¸ÕëÊÇ²»»á³¬¹ý¸ÃÖµ
-	 * ÕâÑù¿ÉÒÔ¼õÉÙ¿¼²ìµÄÈÝÆ÷ÊýÁ¿
+	 * å¦‚æžœ h[left] < h[right] æ­¤æ—¶çš„é¢ç§¯æ˜¯ h[left] * (right - left), æ‰€ä»¥å·¦ç§»å³æŒ‡é’ˆæ˜¯ä¸ä¼šè¶…è¿‡è¯¥å€¼
+	 * è¿™æ ·å¯ä»¥å‡å°‘è€ƒå¯Ÿçš„å®¹å™¨æ•°é‡
 	 */
 	public int maxArea(int[] height) {
 		if(height == null || height.length <= 1)

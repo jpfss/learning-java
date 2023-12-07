@@ -5,7 +5,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 /**
- * 利用的是过时的两个方法；
+ * 鍒╃敤鐨勬槸杩囨椂鐨勪袱涓柟娉曪紱
  * @author vonzhou
  *
  */

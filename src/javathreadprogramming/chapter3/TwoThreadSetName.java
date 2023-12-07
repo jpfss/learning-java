@@ -1,6 +1,6 @@
 package javathreadprogramming.chapter3;
 /**
- * 为线程重命名最好遵循这些：
+ * 涓虹嚎绋嬮噸鍛藉悕鏈�濂介伒寰繖浜涳細
  *  1.Invoke setName() on the Thread before start(), and do not rename the 
  *  Thread after it is started. 
  *  2. Give each thread a brief, meaningful name when possible.   

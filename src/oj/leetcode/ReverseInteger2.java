@@ -14,7 +14,7 @@ public class ReverseInteger2 {
 	public static void main(String[] args) {
 		ReverseInteger2 ri = new ReverseInteger2();
 		int x = 1000000003;
-		// 输入大数没有报错，但是结果奇怪！！！
+		// 杈撳叆澶ф暟娌℃湁鎶ラ敊锛屼絾鏄粨鏋滃鎬紒锛侊紒
 		System.out.println(ri.reverse(x));
 	}
 }

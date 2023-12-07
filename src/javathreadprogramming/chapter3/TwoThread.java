@@ -4,7 +4,7 @@ public class TwoThread extends Thread {
 	private Thread creatorThread;
 
 	/**
-	 * 在对象被创建的时候获得父线程，保存为成员变量
+	 * 鍦ㄥ璞¤鍒涘缓鐨勬椂鍊欒幏寰楃埗绾跨▼锛屼繚瀛樹负鎴愬憳鍙橀噺
 	 */
 	public TwoThread() {
 		// make a note of the thread that constructed me!

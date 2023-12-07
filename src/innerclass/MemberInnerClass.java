@@ -2,13 +2,13 @@ package innerclass;
 
 class Fruit{
 	private int a=3;
-	public class Apple{//³ÉÔ±ÄÚ²¿ÀàÏàµ±ÓÚ·Ç³ÉÔ±³ÉÔ±±äÁ¿
+	public class Apple{//æˆå‘˜å†…éƒ¨ç±»ç›¸å½“äºéæˆå‘˜æˆå‘˜å˜é‡
 		private int a=5;
 		public void test(){
-			System.out.println(Fruit.this.a);//¶ÔÍâ²¿Àà³ÉÔ±±äÁ¿µÄ·ÃÎÊ
+			System.out.println(Fruit.this.a);//å¯¹å¤–éƒ¨ç±»æˆå‘˜å˜é‡çš„è®¿é—®
 		}
 		public void function(){
-			Apple apple=new Apple();//ÔÚenclosing classÖĞÉú³ÉÄÚ²¿Àà¶ÔÏóµÄ·½Ê½
+			Apple apple=new Apple();//åœ¨enclosing classä¸­ç”Ÿæˆå†…éƒ¨ç±»å¯¹è±¡çš„æ–¹å¼
 			//Apple apple=this.new Apple();
 		}
 	}

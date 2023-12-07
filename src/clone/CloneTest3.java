@@ -6,7 +6,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 /**
- * 使用序列化实现深拷贝
+ * 浣跨敤搴忓垪鍖栧疄鐜版繁鎷疯礉
  * @author vonzhou
  *
  */

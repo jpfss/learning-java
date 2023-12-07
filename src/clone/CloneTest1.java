@@ -7,7 +7,7 @@ public class CloneTest1 {
 		p.setName("vonzhou");
 		Person p2=(Person)p.clone();
 		System.out.println(p2.getName()+" : "+p2.getAge());
-		p2.setName("fengzhou");//浅拷贝，name指向了新的String对象
+		p2.setName("fengzhou");//娴呮嫹璐濓紝name鎸囧悜浜嗘柊鐨凷tring瀵硅薄
 		p2.setAge(10);
 		System.out.println("==========================");
 		System.out.println(p.getName()+" : "+p.getAge());

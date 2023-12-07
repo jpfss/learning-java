@@ -2,7 +2,7 @@ package classloader;
 
 class Singleton{
 	
-	//´ÓÉÏµ½ÏÂ½øĞĞ³õÊ¼»¯
+	//ä»ä¸Šåˆ°ä¸‹è¿›è¡Œåˆå§‹åŒ–
 	
 	
 	public static int n1;

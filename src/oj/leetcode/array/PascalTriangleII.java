@@ -8,16 +8,16 @@ import java.util.List;
 /*
  * Given an index k, return the kth row of the Pascal's triangle.
  * For example, given k = 3,
- * Return [1,3,3,1].   ËµÃ÷´ÓµÚ0²ã¿ªÊ¼ 
+ * Return [1,3,3,1].   è¯´æ˜ä»ç¬¬0å±‚å¼€å§‹ 
  *
  *Note:
  *Could you optimize your algorithm to use only O(k) extra space?
- *Ïà¹ØÌâÄ¿£ºPascal's Triangle
+ *ç›¸å…³é¢˜ç›®ï¼šPascal's Triangle
  */
 
 public class PascalTriangleII {
 	
-	// 1.Ò»²ã²ãµü´ú£¬µ«ÊÇ¸´ÔÓ¶ÈºÜ¸ß
+	// 1.ä¸€å±‚å±‚è¿­ä»£ï¼Œä½†æ˜¯å¤æ‚åº¦å¾ˆé«˜
 	public List<Integer> getRow1(int rowIndex) {
 		if(rowIndex < 0)
 			return null;
@@ -28,7 +28,7 @@ public class PascalTriangleII {
 		List<List<Integer>> res = new ArrayList<List<Integer>>();
 		List<Integer> level = null;
 		if(numRows <= 0)
-			return res; // ×¢ÒâÕâÀï ·µ»ØµÄÊÇ¿Õ¼¯ºÏ£¬¶ø²»ÊÇnull
+			return res; // æ³¨æ„è¿™é‡Œ è¿”å›çš„æ˜¯ç©ºé›†åˆï¼Œè€Œä¸æ˜¯null
 		
 		//first level
 		level = new ArrayList<Integer>();
@@ -36,7 +36,7 @@ public class PascalTriangleII {
 		res.add(level);
 		
 		for(int i = 2; i <= numRows; i++){
-			List<Integer> pre = res.get(i - 2);//×¢ÒâÕâÀï
+			List<Integer> pre = res.get(i - 2);//æ³¨æ„è¿™é‡Œ
 			
 			//first 1
 			level = new ArrayList<Integer>();
@@ -54,14 +54,14 @@ public class PascalTriangleII {
 		return res;
 	}
 	
-	// 2. ÆäÊµÉÏÊöµü´úµÄ¹ı³ÌÒÑ¾­ËµÃ÷ÁË¹ı³Ì£¬Ö»ĞèÒª´ïµ½µÚk²ã£¬Ç°ÃæµÄ¹ı³Ì²»ÖØÒª£¬ËùÒÔ¿ÉÒÔ¸²¸Ç
+	// 2. å…¶å®ä¸Šè¿°è¿­ä»£çš„è¿‡ç¨‹å·²ç»è¯´æ˜äº†è¿‡ç¨‹ï¼Œåªéœ€è¦è¾¾åˆ°ç¬¬kå±‚ï¼Œå‰é¢çš„è¿‡ç¨‹ä¸é‡è¦ï¼Œæ‰€ä»¥å¯ä»¥è¦†ç›–
 	public List<Integer> getRow(int rowIndex) {
 		if(rowIndex < 0)
 			return null;
 		
-		int num[] = new int[rowIndex + 1];// O(n)¸´ÔÓ¶È
+		int num[] = new int[rowIndex + 1];// O(n)å¤æ‚åº¦
 		
-		// Ã¿Ò»ÂÖ´ÓºóÍùÇ°¸²¸Ç
+		// æ¯ä¸€è½®ä»åå¾€å‰è¦†ç›–
 		for(int i = 0; i <= rowIndex; i++){
 			num[i] = 1;
 			num[0] = 1;

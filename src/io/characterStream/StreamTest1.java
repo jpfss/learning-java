@@ -6,14 +6,14 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-//Í¬ÑùÓĞ×°ÊÎÄ£Ê½
+//åŒæ ·æœ‰è£…é¥°æ¨¡å¼
 public class StreamTest1 {
 	public static void main(String[] args) throws Exception {
 		OutputStreamWriter osr=new OutputStreamWriter(
 				new FileOutputStream("file.txt"));
 		BufferedWriter bw=new BufferedWriter(osr);
 		bw.write("hello vonzhou\n");
-		bw.write("¾öÕ½Çí»ªÖ®áÛ");
+		bw.write("å†³æˆ˜ç¼åä¹‹å·…");
 		bw.close();
 		
 		BufferedReader br=new BufferedReader(

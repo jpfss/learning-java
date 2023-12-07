@@ -6,9 +6,9 @@ import java.util.List;
 
 public class ListAllFiles {
 	
-	private static int level;//ÓÃÓÚ¼ÇÂ¼Ä¿Â¼»òÎÄ¼şµÄ²ãÊı£¬ÎªËõ½ø·şÎñ
+	private static int level;//ç”¨äºè®°å½•ç›®å½•æˆ–æ–‡ä»¶çš„å±‚æ•°ï¼Œä¸ºç¼©è¿›æœåŠ¡
 	
-	//Ê¹ÓÃµİ¹éÀ´ÏÔÊ¾Ä³Ò»Ä¿Â¼ÏÂËùÓĞµÄÎÄ¼ş£¨ÒªÓĞËõ½ø£©
+	//ä½¿ç”¨é€’å½’æ¥æ˜¾ç¤ºæŸä¸€ç›®å½•ä¸‹æ‰€æœ‰çš„æ–‡ä»¶ï¼ˆè¦æœ‰ç¼©è¿›ï¼‰
 	public static void listAll(File file){
 		if(file.isFile()||file.listFiles().length==0){
 			return ;
@@ -37,7 +37,7 @@ public class ListAllFiles {
 		}
 	}
 	
-	//ÅÅĞò£¬Ê¹µÃÄ¿Â¼ÏÔÊ¾ÔÚÎÄ¼şµÄÉÏÃæ
+	//æ’åºï¼Œä½¿å¾—ç›®å½•æ˜¾ç¤ºåœ¨æ–‡ä»¶çš„ä¸Šé¢
 	private static File[] sort(File[] files){
 		List<File> list=new ArrayList<File>(); 
 		for(File f:files){

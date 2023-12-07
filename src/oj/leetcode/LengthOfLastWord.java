@@ -10,15 +10,15 @@ package oj.leetcode;
  *Given s = "Hello World",
  *return 5.
  *
- *ÎÊÌâ£º1. ¶à¸ö¿Õ¸ñÈçºÎ´¦Àí£¿
- *2.¿ªÍ·½áÎ²µÄ¿Õ¸ñÄØ£¿
+ *é—®é¢˜ï¼š1. å¤šä¸ªç©ºæ ¼å¦‚ä½•å¤„ç†ï¼Ÿ
+ *2.å¼€å¤´ç»“å°¾çš„ç©ºæ ¼å‘¢ï¼Ÿ
  */
 public class LengthOfLastWord {  
 	public static int lengthOfLastWord(String s){
 		if(s == null || s == "")
 			return 0;
 		String ss[] = s.split(" ");
-		// Ïû³ıÀïÃæµÄ¿Õ´®£¬Ã»ÓĞ±ØÒª
+		// æ¶ˆé™¤é‡Œé¢çš„ç©ºä¸²ï¼Œæ²¡æœ‰å¿…è¦
 		//----
 		//System.out.println(ss.length);
 		if(ss.length == 0)

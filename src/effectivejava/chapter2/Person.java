@@ -9,7 +9,7 @@ class Person {
 	private final Date birthDate;
 
 	public Person(Date birthDate) {
-		// Defensive copy - see Item 39 ±£»¤ĞÔ¿½±´
+		// Defensive copy - see Item 39 ä¿æŠ¤æ€§æ‹·è´
 		this.birthDate = new Date(birthDate.getTime());
 	}
 

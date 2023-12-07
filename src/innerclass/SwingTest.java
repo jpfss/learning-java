@@ -13,14 +13,14 @@ public class SwingTest {
 	public static void main(String[] args) {
 		JFrame frame=new JFrame("tianya");
 		JButton button=new JButton("hao");
-		//ÄÚ²¿ÀàÊµÏÖÁËActionListener½Ó¿Ú
+		//å†…éƒ¨ç±»å®ç°äº†ActionListeneræ¥å£
 		button.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("hello");
 			}
 		});
 		
-		//ÄÚ²¿Àà¼Ì³ĞÁËWindowAdapterÀà
+		//å†…éƒ¨ç±»ç»§æ‰¿äº†WindowAdapterç±»
 		frame.addWindowListener(new WindowAdapter(){
 			public void windowClosing(WindowEvent e) {
 				System.exit(0);

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
-//±éÀúMapµÄµÚ¶şÖÖ·½Ê½¡£
+//éå†Mapçš„ç¬¬äºŒç§æ–¹å¼ã€‚
 public class HashMapTest3 {
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {

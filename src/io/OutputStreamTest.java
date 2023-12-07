@@ -7,7 +7,7 @@ import java.io.OutputStream;
 public class OutputStreamTest {
 	public static void main(String[] args) throws Exception {
 //		OutputStream os=new FileOutputStream("f:/hello.txt");//false
-		OutputStream os=new FileOutputStream("f:/hello.txt",true);//ÔÚÔ´ÎÄ¼şÖĞ×·¼ÓĞÅÏ¢
+		OutputStream os=new FileOutputStream("f:/hello.txt",true);//åœ¨æºæ–‡ä»¶ä¸­è¿½åŠ ä¿¡æ¯
 		String s="hello";
 		byte[] buffer=s.getBytes();
 		os.write(buffer);

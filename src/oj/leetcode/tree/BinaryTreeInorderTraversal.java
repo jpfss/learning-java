@@ -18,19 +18,19 @@ import java.util.Stack;
 
  Note: Recursive solution is trivial, could you do it iteratively?
 
- * 1. ÀûÓÃµİ¹éºÜ¼òµ¥
- * 2.Í¨³£¿¼²ìµÄ¾ÍÊÇ°Ñµİ¹é×ªÎª·Çµİ¹é ,¾ÍÊÇÀûÓÃÕ»
+ * 1. åˆ©ç”¨é€’å½’å¾ˆç®€å•
+ * 2.é€šå¸¸è€ƒå¯Ÿçš„å°±æ˜¯æŠŠé€’å½’è½¬ä¸ºéé€’å½’ ,å°±æ˜¯åˆ©ç”¨æ ˆ
  * 
- * Ïà¹ØÌâÄ¿ £º Binary Tree Preorder Traversal
+ * ç›¸å…³é¢˜ç›® ï¼š Binary Tree Preorder Traversal
  */
 public class BinaryTreeInorderTraversal {
-	// µİ¹éÊµÏÖ
+	// é€’å½’å®ç°
 	public List<Integer> inorderTraversal(BinaryTreeNode root) {
 		List<Integer> ll = new ArrayList<Integer>();
 		List<Integer> rl = new ArrayList<Integer>();
 		//List<Integer> rootl = new ArrayList<Integer>();
-		if(root == null)	return ll;//×¢ÒâÕâÀï²»ÊÇ·µ»Ønull£¬·´Ôò²»·ûºÏÒªÇó
-										//ÔÚÊäÈëÎª{} µÄÊ±ºò£¬Êä³ö []
+		if(root == null)	return ll;//æ³¨æ„è¿™é‡Œä¸æ˜¯è¿”å›nullï¼Œååˆ™ä¸ç¬¦åˆè¦æ±‚
+										//åœ¨è¾“å…¥ä¸º{} çš„æ—¶å€™ï¼Œè¾“å‡º []
 		//rootl.add(root.val);
 		
 		if(root.left != null) 
@@ -46,14 +46,14 @@ public class BinaryTreeInorderTraversal {
 		return ll;
 	}
 	
-		// ·Çµİ¹éÊµÏÖ£¬Ö÷ÒªÊÇÕÒµ½Ò»ÖÖµü´úÄ£Ê½
+		// éé€’å½’å®ç°ï¼Œä¸»è¦æ˜¯æ‰¾åˆ°ä¸€ç§è¿­ä»£æ¨¡å¼
 		public List<Integer> inorderTraversal2(BinaryTreeNode root) {
 			List<Integer> res = new ArrayList<Integer>();
 			if(root == null) return res;
 			
 			Stack<BinaryTreeNode> stack = new Stack<BinaryTreeNode>();
 			BinaryTreeNode foot = root;  // footprint
-			// p·Ç¿Õ  »òÕß Õ»ÖĞ»¹ÓĞÔªËØ ¾ÍÒª¼ÌĞø
+			// péç©º  æˆ–è€… æ ˆä¸­è¿˜æœ‰å…ƒç´  å°±è¦ç»§ç»­
 			
 			while(!stack.isEmpty() || foot != null){
 				// go to the left most

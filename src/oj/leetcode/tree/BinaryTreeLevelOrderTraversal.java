@@ -25,8 +25,8 @@ import java.util.Queue;
 
  */
 /*
- * ²ãĞò±éÀúÊÇÓÃ¶ÓÁĞ
- * Ã¿Ò»²ãµÄ½çÏŞÈçºÎ¾ö¶¨£¿¾ÍÊÇ¶ÔÃ¿²ãÈçºÎ¼ÆÊı(£¡£¡£¡Í¨¹ıµ±Ç°¶ÓÁĞµÄ³¤¶È¾ö¶¨)
+ * å±‚åºéå†æ˜¯ç”¨é˜Ÿåˆ—
+ * æ¯ä¸€å±‚çš„ç•Œé™å¦‚ä½•å†³å®šï¼Ÿå°±æ˜¯å¯¹æ¯å±‚å¦‚ä½•è®¡æ•°(ï¼ï¼ï¼é€šè¿‡å½“å‰é˜Ÿåˆ—çš„é•¿åº¦å†³å®š)
  */
 public class BinaryTreeLevelOrderTraversal {
 	  public List<List<Integer>> levelOrder(BinaryTreeNode root) {
@@ -35,12 +35,12 @@ public class BinaryTreeLevelOrderTraversal {
 		  List<Integer> level ; // deal with every level
 		  
 		  if(root == null)
-			  return res;  // ÒªÇó¿ÕµÄÊ±ºò·µ»Ø "[]"¶ø²»ÊÇnull
+			  return res;  // è¦æ±‚ç©ºçš„æ—¶å€™è¿”å› "[]"è€Œä¸æ˜¯null
 		  
 		  queue.offer(root);
 		  while(!queue.isEmpty()){
 			  level = new ArrayList<Integer>();
-			  // Ã¿Ò»²ãµÄÊ±ºòÇóÒ»´Î´óĞ¡£¬¶ø²»ÊÇÔÚ´¦ÀíµÄ¹ı³ÌÖĞ£¬´íÎófor(int i = 0; i < queue.size(); i++)
+			  // æ¯ä¸€å±‚çš„æ—¶å€™æ±‚ä¸€æ¬¡å¤§å°ï¼Œè€Œä¸æ˜¯åœ¨å¤„ç†çš„è¿‡ç¨‹ä¸­ï¼Œé”™è¯¯for(int i = 0; i < queue.size(); i++)
 			  int size = queue.size();
 			  for(int i = 0; i < size; i++){
 				  BinaryTreeNode cur = queue.remove();

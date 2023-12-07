@@ -23,7 +23,7 @@ public class ValidParentheses {
 				if(match(cur,cmp))
 					stack.pop();
 			}else{
-				// ·Ç·¨×Ö·û
+				// éæ³•å­—ç¬¦
 				return false;
 			}
 		}
@@ -32,7 +32,7 @@ public class ValidParentheses {
 		return false;
 	}
 
-	// ×óÓÒÀ¨ºÅÆ¥Åä
+	// å·¦å³æ‹¬å·åŒ¹é…
 	private boolean match(char cur, char cmp) {
 		if((cur==')'&&cmp=='(') || (cur=='}'&&cmp=='{') || (cur==']'&&cmp=='['))
 			return true;

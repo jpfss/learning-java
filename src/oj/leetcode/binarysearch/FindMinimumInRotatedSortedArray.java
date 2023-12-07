@@ -8,8 +8,8 @@ package oj.leetcode.binarysearch;
  */
 public class FindMinimumInRotatedSortedArray {
 	
-	// Í¨¹ı»®·Ö³É×ÓÊı×éÖ®ºó£¬×ÜÓĞÒ»°ëÊÇÓĞĞòµÄ£¬Ö»ĞèÒªÔÚÁíÒ»°ëÖĞ²»¶Ï²éÕÒ
-	// ×¢ÒâÕâÖÖ·Ö¶øÖÎÖ®µÄË¼Ïë£¬²»¶ÏËõĞ¡ÄæĞò×ÓÊı×éµÄ³ß´ç
+	// é€šè¿‡åˆ’åˆ†æˆå­æ•°ç»„ä¹‹åï¼Œæ€»æœ‰ä¸€åŠæ˜¯æœ‰åºçš„ï¼Œåªéœ€è¦åœ¨å¦ä¸€åŠä¸­ä¸æ–­æŸ¥æ‰¾
+	// æ³¨æ„è¿™ç§åˆ†è€Œæ²»ä¹‹çš„æ€æƒ³ï¼Œä¸æ–­ç¼©å°é€†åºå­æ•°ç»„çš„å°ºå¯¸
 	/*
 	 * When you split the sorted, rotated array into two halves (arr[1],..,arr[mid])
 	 * and (arr[mid+1],..,arr[n]), one of them is always sorted and the other always
@@ -31,7 +31,7 @@ public class FindMinimumInRotatedSortedArray {
 	}
 	
 	
-	// ÓÃ×îÖ±½ÓµÄ·½·¨  O(N) ËäÈ»ÄÜAC
+	// ç”¨æœ€ç›´æ¥çš„æ–¹æ³•  O(N) è™½ç„¶èƒ½AC
 	public int findMin2(int[] num) {
 		if(num == null || num.length == 0)
 			return 99999;  // fixme

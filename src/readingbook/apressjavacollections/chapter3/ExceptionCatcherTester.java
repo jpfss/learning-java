@@ -46,7 +46,7 @@ public class ExceptionCatcherTester {
               System.out.println("Done Loading");
               updateTextArea(textArea, sw.toString());
             } catch (IOException e) {
-            	// ËµÃ÷url·Ç·¨£¬ÎŞ·¨¼ÓÔØÒ³Ãæ
+            	// è¯´æ˜urléæ³•ï¼Œæ— æ³•åŠ è½½é¡µé¢
               throw new ThreadException(this, e);
             } finally {
               textField.setEditable(true);

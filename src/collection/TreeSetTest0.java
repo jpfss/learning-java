@@ -6,7 +6,7 @@ import java.util.TreeSet;
 
 public class TreeSetTest0 {
 	public static void main(String[] args) {
-		//°´×ÖµäË³ĞòÄæĞòÊä³ö
+		//æŒ‰å­—å…¸é¡ºåºé€†åºè¾“å‡º
 		TreeSet set=new TreeSet(new ComparatorImpl());
 		set.add("B");
 		set.add("A");

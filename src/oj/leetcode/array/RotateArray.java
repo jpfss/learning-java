@@ -15,7 +15,7 @@ package oj.leetcode.array;
 public class RotateArray {
 
 	/*
-	 * 1. ×î´ÀµÄ·½·¨ ¿ª±Ù¿Õ¼ä O(k)
+	 * 1. æœ€è ¢çš„æ–¹æ³• å¼€è¾Ÿç©ºé—´ O(k)
 	 * Accept !!!
 	 */
 	public void rotate1(int[] nums, int k) {
@@ -26,7 +26,7 @@ public class RotateArray {
 		k %= nums.length;
 		for(int i=nums.length -k, j = 0; i < nums.length; i++, j++)
 			aux[j] = nums[i];
-		// ´ÓºóÍùÇ°ÒÆ
+		// ä»ŽåŽå¾€å‰ç§»
 		for(int i = nums.length - k - 1; i >= 0; i--)
 			nums[i+k] = nums[i];
 		for(int i=0; i < k; i++)
@@ -34,7 +34,7 @@ public class RotateArray {
 	}
 	
 	/*
-	 * 2. Reverse Èý´Î £¬½á¹¹ÇåÎú, ·ûºÏin-place with O(1) extra space
+	 * 2. Reverse ä¸‰æ¬¡ ï¼Œç»“æž„æ¸…æ™°, ç¬¦åˆin-place with O(1) extra space
 	 */
 	public void rotate(int[] nums, int k) {
 		if(nums.length <=1 || k <= 0)

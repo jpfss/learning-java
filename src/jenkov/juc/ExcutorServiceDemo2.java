@@ -31,7 +31,7 @@ public class ExcutorServiceDemo2 {
 
 		String result = "";
 		try {
-			//任何一个任务执行完成或失败，invokeAny都会返回
+			//浠讳綍涓�涓换鍔℃墽琛屽畬鎴愭垨澶辫触锛宨nvokeAny閮戒細杩斿洖
 			result = executorService.invokeAny(callables);
 		} catch (InterruptedException e) {
 			e.printStackTrace();

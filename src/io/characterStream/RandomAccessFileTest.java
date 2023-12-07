@@ -9,7 +9,7 @@ public class RandomAccessFileTest {
 		Person p=new Person(1,"vonzhou",175.23);
 		p.write(raf);
 		
-		raf.seek(0);//重新定位到文件的开头，否则出现EOFException
+		raf.seek(0);//閲嶆柊瀹氫綅鍒版枃浠剁殑寮�澶达紝鍚﹀垯鍑虹幇EOFException
 		Person p2=new Person();
 		p2.read(raf);
 		System.out.println(p2.getId());

@@ -6,18 +6,18 @@ package oj.leetcode;
  * Each time you can either climb 1 or 2 steps.
  *  In how many distinct ways can you climb to the top?
  *  
- *  FibnacciÊıÁĞµÄ¿¼²ì
+ *  Fibnacciæ•°åˆ—çš„è€ƒå¯Ÿ
  */
 public class ClimbingStairs {
 	
-	// µİ¹éµÄ·½·¨ËÙ¶ÈºÜÂı£ºTime Limit Exceeded
+	// é€’å½’çš„æ–¹æ³•é€Ÿåº¦å¾ˆæ…¢ï¼šTime Limit Exceeded
 	public int climbStairs(int n) {
 		if(n == 0 || n == 1)
 			return 1;
 		else return climbStairs(n-1) + climbStairs(n-2);
 	}
 	
-	// ÀûÓÃµü´úµÄ·½Ê½£¬±ÜÃâ´óÁ¿µÄÖØ¸´¼ÆËã
+	// åˆ©ç”¨è¿­ä»£çš„æ–¹å¼ï¼Œé¿å…å¤§é‡çš„é‡å¤è®¡ç®—
 	public int climbStairs2(int n) {
 		int pre = 0;
 		int cur = 1; //

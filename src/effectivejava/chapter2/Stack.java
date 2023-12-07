@@ -21,7 +21,7 @@ public class Stack {
 	public Object pop() {
 		if (size == 0)
 			throw new EmptyStackException();
-		// 上面的过期已用没有清除，所以会发生内存泄露
+		// 涓婇潰鐨勮繃鏈熷凡鐢ㄦ病鏈夋竻闄わ紝鎵�浠ヤ細鍙戠敓鍐呭瓨娉勯湶
 		return elements[--size];
 	}
 

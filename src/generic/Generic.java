@@ -15,7 +15,7 @@ public class Generic<T> {
 		this.element = element;
 	}
 	public static void main(String[] args) {
-		Generic<? extends List> g=null;//Í¨ÓÃÀàĞÍÉùÃ÷
+		Generic<? extends List> g=null;//é€šç”¨ç±»å‹å£°æ˜
 		g=new Generic<LinkedList>();
 		g=new Generic<ArrayList>();
 		
@@ -26,7 +26,7 @@ public class Generic<T> {
 		System.out.println(g3.getElement());
 		
 		g3.setElement(null);
-		//g3Ö»ÄÜ²é¿´»òÕßÒÆ³ıÆäËù²ÎÕÕµÄÊµÀıĞÅÏ¢£¬²»ÄÜÔö¼ÓĞÅÏ¢¡£
+		//g3åªèƒ½æŸ¥çœ‹æˆ–è€…ç§»é™¤å…¶æ‰€å‚ç…§çš„å®ä¾‹ä¿¡æ¯ï¼Œä¸èƒ½å¢åŠ ä¿¡æ¯ã€‚
 		
 		
 		

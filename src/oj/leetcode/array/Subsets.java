@@ -27,8 +27,8 @@ import java.util.List;
 public class Subsets {
 
 	/*
-	 * 1 ÄÑµãÔÚÓÚÀí½âÎ»²Ù×÷ bits[N] Ã¿Ò»Î»µÄ0/1¾Í´ú±í×Ó¼¯ºÏÖĞ¸ÃÔªËØÊÇ·ñ³öÏÖ ¶ø 0 ~ 2^N ¾ÍÊÇ°üº¬ÁËNÎ»bitsµÄËùÓĞ×éºÏÇé¿ö
-	 * È»ºóÏàÓ¦Î»µÄ1×ª»»Îª¶ÔÓ¦µÄÔªËØ¼´¿É Ê±¼ä¸´ÔÓ¶ÈÊÇ¶ÔÊı¼¶±ğ£¡
+	 * 1 éš¾ç‚¹åœ¨äºç†è§£ä½æ“ä½œ bits[N] æ¯ä¸€ä½çš„0/1å°±ä»£è¡¨å­é›†åˆä¸­è¯¥å…ƒç´ æ˜¯å¦å‡ºç° è€Œ 0 ~ 2^N å°±æ˜¯åŒ…å«äº†Nä½bitsçš„æ‰€æœ‰ç»„åˆæƒ…å†µ
+	 * ç„¶åç›¸åº”ä½çš„1è½¬æ¢ä¸ºå¯¹åº”çš„å…ƒç´ å³å¯ æ—¶é—´å¤æ‚åº¦æ˜¯å¯¹æ•°çº§åˆ«ï¼
 	 */
 	public List<List<Integer>> subsets1(int[] S) {
 		if (S == null || S.length == 0)
@@ -36,19 +36,19 @@ public class Subsets {
 		List<List<Integer>> result = new ArrayList<List<Integer>>();
 		ArrayList<Integer> list = new ArrayList<Integer>();
 
-		// ¶Ô¸ÃÊı×é½øĞĞÉıĞòÅÅĞò
+		// å¯¹è¯¥æ•°ç»„è¿›è¡Œå‡åºæ’åº
 		Arrays.sort(S);
 
 		int n = S.length; // number of elements
 		long len = 1 << n;//
 		for (int i = 0; i < len; i++) {
 			for (int j = 0; j < n; j++) {
-				// °ÑÎ»Îª1µÄ¶ÔÓ¦ÔªËØ¼ÓÈë¼¯ºÏ
+				// æŠŠä½ä¸º1çš„å¯¹åº”å…ƒç´ åŠ å…¥é›†åˆ
 				if ((i & 1 << j) != 0)
 					list.add(S[j]);
 			}
-			result.add(list); // ¶ÔÓÚ i=0 ¾Í»á¼ÓÈëÒ»¸ö¿Õ¼¯ºÏ
-			// ÎªÏÂÒ»¸ö×Ó¼¯ºÏ´æ´¢×ö×¼±¸
+			result.add(list); // å¯¹äº i=0 å°±ä¼šåŠ å…¥ä¸€ä¸ªç©ºé›†åˆ
+			// ä¸ºä¸‹ä¸€ä¸ªå­é›†åˆå­˜å‚¨åšå‡†å¤‡
 			list = new ArrayList<Integer>();
 		}
 
@@ -56,7 +56,7 @@ public class Subsets {
 	}
 
 	/*
-	 * 2 ²»ÓÃÎ»²Ù×÷Ö±½ÓÓÃµİ¹é¹¹Ôì³öËùÓĞµÄ×Ó¼¯ºÏ TODO Æô·¢£¡£¡
+	 * 2 ä¸ç”¨ä½æ“ä½œç›´æ¥ç”¨é€’å½’æ„é€ å‡ºæ‰€æœ‰çš„å­é›†åˆ TODO å¯å‘ï¼ï¼
 	 */
 
 	/*
@@ -66,7 +66,7 @@ public class Subsets {
 	 * subsets 2)second--don't. This is recursive back tracking problem. Very
 	 * important:within one recursive call, restore the global invariant in
 	 * between the recursive calls.
-	 *  ÎÊÌâ£ºÄÄÀïÌåÏÖÁË»ØËİ£¿ ÌåÏÖÔÚ£º¼ÓÈëÏÂÒ»¸öÔªËØ ¶øºóÔÚ»ØËİÉ¾³ıÄÇ¸öÔªËØ £¬ÓĞÒ»¸ö»Ö¸´»·¾³µÄ¹ı³Ì
+	 *  é—®é¢˜ï¼šå“ªé‡Œä½“ç°äº†å›æº¯ï¼Ÿ ä½“ç°åœ¨ï¼šåŠ å…¥ä¸‹ä¸€ä¸ªå…ƒç´  è€Œååœ¨å›æº¯åˆ é™¤é‚£ä¸ªå…ƒç´  ï¼Œæœ‰ä¸€ä¸ªæ¢å¤ç¯å¢ƒçš„è¿‡ç¨‹
 	 */
 	public List<List<Integer>> subsets(int[] S) {
 		// Start typing your Java solution below
@@ -97,8 +97,8 @@ public class Subsets {
 	}
 
 	/* 4
-	 *  ·Çµİ¹é£ºÏÈ¼ÓÈëÒ»¸ö¿Õ¼¯£¬¶øºóÒ»´Î°ÑÏÂÒ»¸öÔªËØ¼ÓÈëµ½Ö®Ç°µÄ×Ó¼¯ÖĞµÃµ½Ò»¸öĞÂµÄ×Ó¼¯
-	 *  Èç£º
+	 *  éé€’å½’ï¼šå…ˆåŠ å…¥ä¸€ä¸ªç©ºé›†ï¼Œè€Œåä¸€æ¬¡æŠŠä¸‹ä¸€ä¸ªå…ƒç´ åŠ å…¥åˆ°ä¹‹å‰çš„å­é›†ä¸­å¾—åˆ°ä¸€ä¸ªæ–°çš„å­é›†
+	 *  å¦‚ï¼š
 	 *  1) #
 	 *  2) 1, |#
 	 *  3) 2, 1 2, |#, 1

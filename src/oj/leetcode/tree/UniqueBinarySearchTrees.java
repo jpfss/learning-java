@@ -12,9 +12,9 @@ package oj.leetcode.tree;
  /     /       \                 \
  2     1         2                 3
  * 
- * ÓĞµãÅÅÁĞ×éºÏµÄÎ¶µÀ:°Ñ½Úµãn²åÈëµ½ÒÑÓĞµÄ£¨n-1£©¸ö½Úµã×é³ÉµÄĞòÁĞÖĞ
- * 1,ÀûÓÃµİ¹éÈİÒ×Àí½â
- * 2.ÓÃ¿Õ¼ä»»Ê±¼ä£¬²»¼ûµÃ¸ü¿ì
+ * æœ‰ç‚¹æ’åˆ—ç»„åˆçš„å‘³é“:æŠŠèŠ‚ç‚¹næ’å…¥åˆ°å·²æœ‰çš„ï¼ˆn-1ï¼‰ä¸ªèŠ‚ç‚¹ç»„æˆçš„åºåˆ—ä¸­
+ * 1,åˆ©ç”¨é€’å½’å®¹æ˜“ç†è§£
+ * 2.ç”¨ç©ºé—´æ¢æ—¶é—´ï¼Œä¸è§å¾—æ›´å¿«
  */
 public class UniqueBinarySearchTrees {
 	public static int numTrees(int n) {
@@ -25,7 +25,7 @@ public class UniqueBinarySearchTrees {
 		int trees=0;
 		
 		for(int j=0; j <n; j++){
-			trees += numTrees(j) * numTrees(n-1-j); // ÊÇ Join²Ù×÷ ËùÒÔÊÇ³Ë
+			trees += numTrees(j) * numTrees(n-1-j); // æ˜¯ Joinæ“ä½œ æ‰€ä»¥æ˜¯ä¹˜
 		}
 				
 		return trees;

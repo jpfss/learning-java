@@ -14,7 +14,7 @@ public class ThreadTest4 {
 }
 
 class Fruit{
-	public synchronized  void kind(){//Ëø¶¨µÄÊÇ¸Ã¶ÔÏó
+	public synchronized  void kind(){//é”å®šçš„æ˜¯è¯¥å¯¹è±¡
 		for(int i=0;i<20;i++){
 			try {
 				Thread.sleep((long)Math.random()*1000);
@@ -24,7 +24,7 @@ class Fruit{
 			System.out.println("apple: "+i);
 		}
 	}
-	public synchronized static void kind2(){//Ëø¶¨µÄÊÇ¶ÔÓ¦µÄclass¶ÔÏó
+	public synchronized static void kind2(){//é”å®šçš„æ˜¯å¯¹åº”çš„classå¯¹è±¡
 		for(int i=0;i<20;i++){
 			try {
 				Thread.sleep((long)Math.random()*1000);

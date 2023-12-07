@@ -3,7 +3,7 @@ package collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
-//统计命令行中出现的各个字符串的个数，使用Map
+//缁熻鍛戒护琛屼腑鍑虹幇鐨勫悇涓瓧绗︿覆鐨勪釜鏁帮紝浣跨敤Map
 public class HashMapTest2 {
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {

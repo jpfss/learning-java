@@ -28,7 +28,7 @@ public class ReverseInteger {
 
 	public static void main(String[] args) {
 		ReverseInteger ri = new ReverseInteger();
-		int x = 1000000003;// »á³ö´í!!!!!
+		int x = 1000000003;// ä¼šå‡ºé”™!!!!!
 		// int x = -1230;
 		System.out.println(ri.reverse(x));
 

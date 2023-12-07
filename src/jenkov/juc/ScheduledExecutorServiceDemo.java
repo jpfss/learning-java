@@ -20,12 +20,12 @@ public class ScheduledExecutorServiceDemo {
 		        }
 		    },
 		    5,
-		    TimeUnit.SECONDS); // 5 ÃëºóÖ´ĞĞ
+		    TimeUnit.SECONDS); // 5 ç§’åæ‰§è¡Œ
 		
 		System.out.println("in main ");
 		
 		try {
-			//Ã»ÓĞÖ´ĞĞÍê³ÉÇ°£¬ÕâÀï»á×èÈû£¿£¿
+			//æ²¡æœ‰æ‰§è¡Œå®Œæˆå‰ï¼Œè¿™é‡Œä¼šé˜»å¡ï¼Ÿï¼Ÿ
 			System.out.println("result = " + scheduledFuture.get());
 		} catch (InterruptedException e) {
 			e.printStackTrace();

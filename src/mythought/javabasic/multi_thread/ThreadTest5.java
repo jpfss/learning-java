@@ -16,7 +16,7 @@ public class ThreadTest5 {
 class Fruit2{
 	private Object obj=new Object();
 	public void kind(){
-		synchronized(this){//可以锁定任何对象如obj
+		synchronized(this){//鍙互閿佸畾浠讳綍瀵硅薄濡俹bj
 			for(int i=0;i<20;i++){
 			try {
 				Thread.sleep((long)Math.random()*1000);

@@ -5,7 +5,7 @@ import java.io.FilenameFilter;
 
 public class FilenameFilterTest {
 	public static void main(String[] args) {
-		File file=new File("F:\\AJavaÏÂÔØ");
+		File file=new File("F:\\AJavaä¸‹è½½");
 		String[]  fileNames=file.list(new FilenameFilter(){
 
 			@Override

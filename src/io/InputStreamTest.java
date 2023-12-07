@@ -8,7 +8,7 @@ public class InputStreamTest {
 	public static void main(String[] args) throws Exception {
 		
 		InputStream is=new FileInputStream("f:/hello.txt");
-		//µ»º€”⁄“‘œ¬¡Ω––
+		//Á≠â‰ª∑‰∫é‰ª•‰∏ã‰∏§Ë°å
 		File file=new File("f:/hello.txt");
 		InputStream is2=new FileInputStream(file);
 		

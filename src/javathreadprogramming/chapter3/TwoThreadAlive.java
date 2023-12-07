@@ -20,7 +20,7 @@ public class TwoThreadAlive extends Thread {
 
 		System.out.println("before start(), tt.isAlive()=" + tt.isAlive());
 		tt.start();
-		// 刚启动的线程肯定是alive的；
+		// 鍒氬惎鍔ㄧ殑绾跨▼鑲畾鏄痑live鐨勶紱
 		System.out.println("just after start(), tt.isAlive()=" + tt.isAlive());
 
 		for ( int i = 0; i < 10; i++ ) {

@@ -3,7 +3,7 @@ package effectivejava.chapter2;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-//²»¿ÉÊµÀı»¯µÄÀà£¬ÓÃÓÚ·şÎñ×¢²áºÍ·ÃÎÊ
+//ä¸å¯å®ä¾‹åŒ–çš„ç±»ï¼Œç”¨äºæœåŠ¡æ³¨å†Œå’Œè®¿é—®
 public class Services {
 	private Services() {
 	}
@@ -27,7 +27,7 @@ public class Services {
 	}
 
 	public Service newInstance(String name) {
-		// Í¨¹ı·şÎñÌá¹©Õß»ñµÃ·şÎñ
+		// é€šè¿‡æœåŠ¡æä¾›è€…è·å¾—æœåŠ¡
 		Provider p = providers.get(name);
 		if (p == null)
 			throw new IllegalArgumentException("No provider registered with "

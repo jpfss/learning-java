@@ -13,7 +13,7 @@ public class URLConnectionTest {
 		URLConnection con=url.openConnection();
 		InputStream is=con.getInputStream();
 		
-		//ÒÔÉÏÁ½ĞĞ´úÂëµÈ¼ÛÓÚ
+		//ä»¥ä¸Šä¸¤è¡Œä»£ç ç­‰ä»·äº
 		InputStream is2=url.openStream();
 		
 		

@@ -4,7 +4,7 @@ public class SingleNumber {
 	public int singleNumber(int[] A) {
 		if (A == null || A.length == 0)
 			return -1;
-		// Á½¸öÏàÍ¬µÄÊıÒì»òÔËËãºóÎª0£¬ÇÉÃî
+		// ä¸¤ä¸ªç›¸åŒçš„æ•°å¼‚æˆ–è¿ç®—åä¸º0ï¼Œå·§å¦™
 		int res = 0;
 		for (int i = 0; i < A.length; i++)
 			res ^= A[i];

@@ -10,7 +10,7 @@ package oj.leetcode.binarysearch;
  * Given [5, 7, 7, 8, 8, 10] and target value 8,
  * return [3, 4].
  * 
- * ¶ş·Ö²éÕÒ
+ * äºŒåˆ†æŸ¥æ‰¾
  * 
  * 
  */

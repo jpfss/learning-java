@@ -34,7 +34,7 @@ class Customer implements Cloneable{
 	}
 	public Object clone() throws CloneNotSupportedException {
 		Customer c=(Customer)super.clone();
-		c.setAddress((Address)address.clone());//ÊµÏÖÉî¿½±´deep clone
+		c.setAddress((Address)address.clone());//å®ç°æ·±æ‹·è´deep clone
 		return c;
 	}
 }

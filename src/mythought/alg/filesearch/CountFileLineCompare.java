@@ -2,8 +2,8 @@ package mythought.alg.filesearch;
 
 
 /*
- * ÈçºÎµÃµ½ÎÄ¼şµÄĞĞÊı
- * ¸÷ÖÖ·½·¨¶Ô±È
+ * å¦‚ä½•å¾—åˆ°æ–‡ä»¶çš„è¡Œæ•°
+ * å„ç§æ–¹æ³•å¯¹æ¯”
  */
 public class CountFileLineCompare {
 

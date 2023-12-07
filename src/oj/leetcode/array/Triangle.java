@@ -20,14 +20,14 @@ import java.util.List;
  Bonus point if you are able to do this using only O(n) extra space, 
  where n is the total number of rows in the triangle.
 
- * 1. ÌâµÄÒâË¼Ã»ÓĞÀí½â  ¶ÔadjacentÀí½â
- * 2. ºÍ¶şÎ¬¾ØÕóÖĞ×îĞ¡Â·¾¶ÀàĞÍ  ¿Õ¼ä¸´ÔÓ¶ÈÊÇ O(n^2)
+ * 1. é¢˜çš„æ„æ€æ²¡æœ‰ç†è§£  å¯¹adjacentç†è§£
+ * 2. å’ŒäºŒç»´çŸ©é˜µä¸­æœ€å°è·¯å¾„ç±»å‹  ç©ºé—´å¤æ‚åº¦æ˜¯ O(n^2)
  * 3. 
  *
  */
 public class Triangle {
 
-	// 1. ´íÎóµÄÀí½â
+	// 1. é”™è¯¯çš„ç†è§£
 	public int minimumTotal1(List<List<Integer>> triangle) {
 		if (triangle == null || triangle.size() == 0)
 			return 0;//
@@ -52,29 +52,29 @@ public class Triangle {
 		return total;
 	}
 
-	// Ö±¹ÛµÄÏë·¨£¬ ÏëÏóÊÇÒ»¿ÃÊ÷£¬Á½¸ö¸ß²ã½Úµã¾ö¶¨ÏÂÒ»¸ö½ÚµãµÄÂ·¾¶³¤¶È ¶¯Ì¬¹æ»®
+	// ç›´è§‚çš„æƒ³æ³•ï¼Œ æƒ³è±¡æ˜¯ä¸€æ£µæ ‘ï¼Œä¸¤ä¸ªé«˜å±‚èŠ‚ç‚¹å†³å®šä¸‹ä¸€ä¸ªèŠ‚ç‚¹çš„è·¯å¾„é•¿åº¦ åŠ¨æ€è§„åˆ’
 	public int minimumTotal2(List<List<Integer>> triangle) {
 		if (triangle == null || triangle.size() == 0)
 			return 0;//
-		// ÈçºÎÊµÏÖLIstµÄÉî¶È¿½±´??TODO
+		// å¦‚ä½•å®ç°LIstçš„æ·±åº¦æ‹·è´??TODO
 		int size = triangle.size();
 		int[][] paths = new int[size][size];
 		paths[0][0] = triangle.get(0).get(0);
-		// ±ß½ç´¦Àí
+		// è¾¹ç•Œå¤„ç†
 		for (int i = 1; i < size; i++) {
 			paths[i][0] = triangle.get(i).get(0) + paths[i - 1][0];
 			paths[i][i] = triangle.get(i).get(i) + paths[i - 1][i - 1];
 
 		}
 
-		// ¸üĞÂÆäËûÂ·¾¶
+		// æ›´æ–°å…¶ä»–è·¯å¾„
 		for (int i = 2; i < size; i++)
 			for (int j = 1; j < i; j++) {
 				paths[i][j] = triangle.get(i).get(j)
 						+ Math.min(paths[i - 1][j - 1], paths[i - 1][j]);
 			}
 
-		// ´ËÊ±ÕÒµ½×îºóÒ»ĞĞÖĞµÄ×îĞ¡Öµ¼´¿É
+		// æ­¤æ—¶æ‰¾åˆ°æœ€åä¸€è¡Œä¸­çš„æœ€å°å€¼å³å¯
 		int min = paths[size - 1][0];
 		for (int i = 0; i < size; i++)
 			if (paths[size - 1][i] < min)
@@ -83,7 +83,7 @@ public class Triangle {
 		return min;
 	}
 
-	// ¶¯Ì¬¹æ»®  ×Ôµ×ÏòÉÏ ´ïµ½O(n)µÄ¿Õ¼ä¸´ÔÓ¶È n´ú±í²ãÊı
+	// åŠ¨æ€è§„åˆ’  è‡ªåº•å‘ä¸Š è¾¾åˆ°O(n)çš„ç©ºé—´å¤æ‚åº¦ nä»£è¡¨å±‚æ•°
 	public int minimumTotal(List<List<Integer>> triangle) {
 		if (triangle == null || triangle.size() == 0)
 			return 0;//

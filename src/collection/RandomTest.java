@@ -14,10 +14,10 @@ public class RandomTest {
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
 		Random random=new Random();
-		Map map=new TreeMap();//´æ´¢Êı×Ö¼°Æä³öÏÖµÄ´ÎÊı
-		List list=new ArrayList();//´æ´¢³öÏÖ´ÎÊı×î¶àµÄÊı×Ö
+		Map map=new TreeMap();//å­˜å‚¨æ•°å­—åŠå…¶å‡ºç°çš„æ¬¡æ•°
+		List list=new ArrayList();//å­˜å‚¨å‡ºç°æ¬¡æ•°æœ€å¤šçš„æ•°å­—
 		for(int i=0;i<50;i++){
-			//nextInt(x)²úÉúÒ»¸ö0µ½x-1µÄÕûÊı
+			//nextInt(x)äº§ç”Ÿä¸€ä¸ª0åˆ°x-1çš„æ•´æ•°
 			int r=random.nextInt(41)+10;
 			Integer in=(Integer)r;
 			if(map.get(in)==null){
@@ -29,7 +29,7 @@ public class RandomTest {
 			}
 		}
 		
-		//µÃµ½³öÏÖ´ÎÊıµÄÒ»¸ö¼¯ºÏ£¬´Ó¶øÊ¹ÓÃCollectionsÖĞ¾²Ì¬·½·¨Çó×î´óÖµ
+		//å¾—åˆ°å‡ºç°æ¬¡æ•°çš„ä¸€ä¸ªé›†åˆï¼Œä»è€Œä½¿ç”¨Collectionsä¸­é™æ€æ–¹æ³•æ±‚æœ€å¤§å€¼
 		Collection collection=map.values();
 		Integer m=(Integer)Collections.max(collection);
 		
@@ -44,7 +44,7 @@ public class RandomTest {
 			System.out.println(key+":"+value);
 		}
 		
-		System.out.println("³öÏÖ×î¶àµÄ´ÎÊıÎª£º"+m.intValue()+"  ÕâĞ©Êı×ÖÎª£º");
+		System.out.println("å‡ºç°æœ€å¤šçš„æ¬¡æ•°ä¸ºï¼š"+m.intValue()+"  è¿™äº›æ•°å­—ä¸ºï¼š");
 		for(Iterator iterator=list.iterator();iterator.hasNext();){
 			Integer in=(Integer)iterator.next();
 			System.out.println(in.intValue());

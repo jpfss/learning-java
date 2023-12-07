@@ -7,7 +7,7 @@ public class MyTest {
 	@SuppressWarnings("unchecked")
 	@Deprecated
 	public void output(){
-		System.out.println("¾öÕ½Çí»ªÖ®µß£¡");
+		System.out.println("å†³æˆ˜ç¼åä¹‹é¢ ï¼");
 	}
 
 }

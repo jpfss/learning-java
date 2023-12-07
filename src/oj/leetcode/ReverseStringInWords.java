@@ -9,14 +9,14 @@ public class ReverseStringInWords {
 
     /**
      * AC
-     * 1.Ö±½ÓÊ¹ÓÃAPI
-     * ºÄÊ±420ms
+     * 1.ç›´æ¥ä½¿ç”¨API
+     * è€—æ—¶420ms
      */
     public String reverseWords(String s) {
         if (s == null || s.length() == 0)
             return "";
 
-        // split() »á°üº¬×Ö·û´®¿ªÍ·µÄ¿Õ´®
+        // split() ä¼šåŒ…å«å­—ç¬¦ä¸²å¼€å¤´çš„ç©ºä¸²
         String arr[] = s.split(" ");
         if (arr.length == 0)
             return "";
@@ -27,7 +27,7 @@ public class ReverseStringInWords {
                 sb.append(arr[i]).append(" ");
         }
 
-        // È¥µô×îºóÒ»¸ö¿Õ¸ñ
+        // å»æ‰æœ€åä¸€ä¸ªç©ºæ ¼
         String result = sb.toString();
         return result.substring(0, result.length() - 1);
     }
@@ -52,8 +52,8 @@ public class ReverseStringInWords {
     }
 
     /**
-     * 3. ²»ÓÃÏÖ³ÉµÄAPI
-     * ºÄÊ±5ms
+     * 3. ä¸ç”¨ç°æˆçš„API
+     * è€—æ—¶5ms
      */
     public String reverseWords3(String s) {
         if (s == null) return null;

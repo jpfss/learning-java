@@ -8,15 +8,15 @@ import java.util.Arrays;
  * 
  * The digits are stored such that the most significant digit is at the head of the list.
  * 
- * ÏÈ¼Ó ÔÙ´¦Àí½øÎ»µÄÎÊÌâ£¬ÊÇ·ñ¿¼ÂÇÒç³ö £¿£¿À©Èİ£¿£¿
+ * å…ˆåŠ  å†å¤„ç†è¿›ä½çš„é—®é¢˜ï¼Œæ˜¯å¦è€ƒè™‘æº¢å‡º ï¼Ÿï¼Ÿæ‰©å®¹ï¼Ÿï¼Ÿ
  * 
  * Input:	[7,2,8,5,0,9,1,2,9,5,3,6,6,7,3,2,8,4,3,7,9,5,7,7,4,7,4,9,4,7,0,1,1,1,7,4,0,0,6]
 Output:	null
 Expected:	[7,2,8,5,0,9,1,2,9,5,3,6,6,7,3,2,8,4,3,7,9,5,7,7,4,7,4,9,4,7,0,1,1,1,7,4,0,0,7]
- * fuck ¾¡È»ÎŞĞè¿¼ÂÇÒç³ö 
+ * fuck å°½ç„¶æ— éœ€è€ƒè™‘æº¢å‡º 
  */
 public class PlusOne {
-	// ¿¼ÂÇÒç³ö
+	// è€ƒè™‘æº¢å‡º
 	public int[] plusOne1(int[] digits) {
 		if(digits == null || digits.length == 0)
 			return null;
@@ -33,7 +33,7 @@ public class PlusOne {
 				return null;
 		}
 		
-		// ÓÃ×ã¹»´óµÄ¿Õ¼äÀ´ÔËËã,Long.MAX_VALUE=9223372036854775807, 20bits¾Í¿ÉÒÔ
+		// ç”¨è¶³å¤Ÿå¤§çš„ç©ºé—´æ¥è¿ç®—,Long.MAX_VALUE=9223372036854775807, 20bitså°±å¯ä»¥
 		int tmp[] = new int[20];
 		for(int i = 0; i < 20; i++)
 			tmp[i] = 0;
@@ -73,7 +73,7 @@ public class PlusOne {
 		if(digits == null || digits.length == 0)
 			return null;
 		
-		// ÓÃ×ã¹»´óµÄ¿Õ¼äÀ´ÔËËã,Long.MAX_VALUE=9223372036854775807, 20bits¾Í¿ÉÒÔ
+		// ç”¨è¶³å¤Ÿå¤§çš„ç©ºé—´æ¥è¿ç®—,Long.MAX_VALUE=9223372036854775807, 20bitså°±å¯ä»¥
 		int space = digits.length + 1;
 		int tmp[] = new int[space];
 		

@@ -3,8 +3,8 @@ package mythought.javabasic.multi_thread;
 public class FechMoney {
 	public static void main(String[] args) {
 		Bank bank=new Bank();
-		Thread t1=new MoneyThread(bank);//¹ñÌ¨
-		Thread t2=new MoneyThread(bank);//×Ô¶¯È¡¿î»ú
+		Thread t1=new MoneyThread(bank);//æŸœå°
+		Thread t2=new MoneyThread(bank);//è‡ªåŠ¨å–æ¬¾æœº
 		t1.start();
 		t2.start();
 	}
@@ -24,7 +24,7 @@ class Bank{
 		}
 		else{
 			try {
-				Thread.sleep(1000);//È¡Ç®Ç°µÄ³õÊ¼»¯¹¤×÷
+				Thread.sleep(1000);//å–é’±å‰çš„åˆå§‹åŒ–å·¥ä½œ
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

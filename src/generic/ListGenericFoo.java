@@ -2,8 +2,8 @@ package generic;
 
 import java.util.LinkedList;
 import java.util.List;
-//限制参数T继承某个类或实现某个接口，要用关键字extends
-//当没有参数化T时，默认T extends Object
+//闄愬埗鍙傛暟T缁ф壙鏌愪釜绫绘垨瀹炵幇鏌愪釜鎺ュ彛锛岃鐢ㄥ叧閿瓧extends
+//褰撴病鏈夊弬鏁板寲T鏃讹紝榛樿T extends Object
 public class ListGenericFoo<T extends List<String>> {
 	private T foo;
 

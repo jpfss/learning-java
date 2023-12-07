@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MaxDepthBinaryTree {
-	// ÒòÎª²»ÖªµÀ½ÚµãµÄ×ÜÊı£¬ËùÒÔÖ»ÄÜÍ¨¹ıµİ¹éÀ´Çó½â
+	// å› ä¸ºä¸çŸ¥é“èŠ‚ç‚¹çš„æ€»æ•°ï¼Œæ‰€ä»¥åªèƒ½é€šè¿‡é€’å½’æ¥æ±‚è§£
 	public int maxDepth(BinaryTreeNode root) {
 		if (root == null)
 			return 0;

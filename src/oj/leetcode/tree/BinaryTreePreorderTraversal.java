@@ -7,13 +7,13 @@ import java.util.Stack;
 
 public class BinaryTreePreorderTraversal {
 	
-	//µİ¹éÊµÏÖ
+	//é€’å½’å®ç°
 	public static List<Integer> preorderTraversal(BinaryTreeNode root) { 
 		List<Integer> ll = new ArrayList<Integer>();
 		List<Integer> rl = new ArrayList<Integer>();
 		List<Integer> rootl = new ArrayList<Integer>();
-		if(root == null)	return rootl;//×¢ÒâÕâÀï²»ÊÇ·µ»Ønull£¬·´Ôò²»·ûºÏÒªÇó
-										//ÔÚÊäÈëÎª{} µÄÊ±ºò£¬Êä³ö []
+		if(root == null)	return rootl;//æ³¨æ„è¿™é‡Œä¸æ˜¯è¿”å›nullï¼Œååˆ™ä¸ç¬¦åˆè¦æ±‚
+										//åœ¨è¾“å…¥ä¸º{} çš„æ—¶å€™ï¼Œè¾“å‡º []
 		rootl.add(root.val);
 		
 		if(root.left != null) 
@@ -28,7 +28,7 @@ public class BinaryTreePreorderTraversal {
 		return rootl;
 	}
 	
-	// ÀûÓÃÒ»¸öÕ»À´ÊµÏÖ
+	// åˆ©ç”¨ä¸€ä¸ªæ ˆæ¥å®ç°
 	public static List<Integer> preorderTraversal2(BinaryTreeNode root) { 
 		Stack<BinaryTreeNode> stack = new Stack<BinaryTreeNode>();
 		List<Integer> rootl = new ArrayList<Integer>();

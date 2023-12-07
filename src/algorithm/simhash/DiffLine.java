@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * ÀûÓÃhashset À´ÅĞ¶ÏÁ©ÎÄ¼şÓĞ¶àÉÙĞĞÊÇ²»Í¬µÄ ¹ı³ÌĞ´µÄºÜÂÒ£¬¿ÉÒÔÓÅ»¯Ò»ÏÂ£¬ÓÃÒ»¸öÑ­»·£¬·ñÔòÃ»ÓĞÀ©Õ¹ĞÔ
+ * åˆ©ç”¨hashset æ¥åˆ¤æ–­ä¿©æ–‡ä»¶æœ‰å¤šå°‘è¡Œæ˜¯ä¸åŒçš„ è¿‡ç¨‹å†™çš„å¾ˆä¹±ï¼Œå¯ä»¥ä¼˜åŒ–ä¸€ä¸‹ï¼Œç”¨ä¸€ä¸ªå¾ªç¯ï¼Œå¦åˆ™æ²¡æœ‰æ‰©å±•æ€§
  * 
  * @author vonzhou
  * 
@@ -74,33 +74,33 @@ public class DiffLine {
 				set5.add(line5);
 			}
 
-			// set12.retainAll(set2);// ½ö±£ÁôÒ²³öÏÖÔÚset2ÖĞµÄÔªËØ
-			// System.out.println("set1 ^ set2(½»¼¯) µÄ´óĞ¡= : " + set12.size());
+			// set12.retainAll(set2);// ä»…ä¿ç•™ä¹Ÿå‡ºç°åœ¨set2ä¸­çš„å…ƒç´ 
+			// System.out.println("set1 ^ set2(äº¤é›†) çš„å¤§å°= : " + set12.size());
 			// set1.removeAll(set12);
-			// System.out.println("set1 - (set1 ^ set2) µÄ´óĞ¡=  " + set1.size());
+			// System.out.println("set1 - (set1 ^ set2) çš„å¤§å°=  " + set1.size());
 			// set2.removeAll(set12);
-			// System.out.println("set2- (set1 ^ set2) µÄ´óĞ¡=  " + set2.size());
+			// System.out.println("set2- (set1 ^ set2) çš„å¤§å°=  " + set2.size());
 
 			// set13.retainAll(set3);//
-			// System.out.println("set1 ^ set3(½»¼¯) µÄ´óĞ¡= : " + set13.size());
+			// System.out.println("set1 ^ set3(äº¤é›†) çš„å¤§å°= : " + set13.size());
 			// set1.removeAll(set13);
-			// System.out.println("set1 - (set1 ^ set3) µÄ´óĞ¡=  " + set1.size());
+			// System.out.println("set1 - (set1 ^ set3) çš„å¤§å°=  " + set1.size());
 			// set3.removeAll(set13);
-			// System.out.println("set3- (set1 ^ set3) µÄ´óĞ¡=  " + set3.size());
+			// System.out.println("set3- (set1 ^ set3) çš„å¤§å°=  " + set3.size());
 
 			// set14.retainAll(set4);//
-			// System.out.println("set1 ^ set4(½»¼¯) µÄ´óĞ¡= : " + set14.size());
+			// System.out.println("set1 ^ set4(äº¤é›†) çš„å¤§å°= : " + set14.size());
 			// set1.removeAll(set14);
-			// System.out.println("set1 - (set1 ^ set4) µÄ´óĞ¡=  " + set1.size());
+			// System.out.println("set1 - (set1 ^ set4) çš„å¤§å°=  " + set1.size());
 			// set4.removeAll(set14);
-			// System.out.println("set4- (set1 ^ set4) µÄ´óĞ¡=  " + set4.size());
+			// System.out.println("set4- (set1 ^ set4) çš„å¤§å°=  " + set4.size());
 
 			set15.retainAll(set5);//
-			System.out.println("set1 ^ set5(½»¼¯) µÄ´óĞ¡= : " + set15.size());
+			System.out.println("set1 ^ set5(äº¤é›†) çš„å¤§å°= : " + set15.size());
 			set1.removeAll(set15);
-			System.out.println("set1 - (set1 ^ set5) µÄ´óĞ¡=  " + set1.size());
+			System.out.println("set1 - (set1 ^ set5) çš„å¤§å°=  " + set1.size());
 			set4.removeAll(set15);
-			System.out.println("set5- (set1 ^ set5) µÄ´óĞ¡=  " + set5.size());
+			System.out.println("set5- (set1 ^ set5) çš„å¤§å°=  " + set5.size());
 		} catch (Exception e) {
 			e.printStackTrace();
 			try {
